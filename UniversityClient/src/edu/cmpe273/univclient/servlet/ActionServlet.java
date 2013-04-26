@@ -1,4 +1,4 @@
-package edu.cmpe273.univ.servlet;
+package edu.cmpe273.univclient.servlet;
 
 public class ActionServlet {
 
