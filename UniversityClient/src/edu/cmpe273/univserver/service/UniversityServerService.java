@@ -1,0 +1,32 @@
+/**
+ * UniversityServerService.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package edu.cmpe273.univserver.service;
+
+public interface UniversityServerService extends java.rmi.Remote {
+    public edu.cmpe273.univserver.beans.Person signIn(java.lang.String username, java.lang.String password) throws java.rmi.RemoteException;
+    public java.lang.String addCourse(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException;
+    public edu.cmpe273.univserver.beans.Person adminSignIn(java.lang.String username, java.lang.String password) throws java.rmi.RemoteException;
+    public java.lang.String registerUser(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException;
+    public edu.cmpe273.univserver.beans.Course searchCourse(java.lang.String category, java.lang.String input) throws java.rmi.RemoteException;
+    public java.lang.String dropCourse(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException;
+    public java.lang.String deleteStudentInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException;
+    public java.lang.String adminEditCourse(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException;
+    public java.lang.String adminDeleteCourse(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException;
+    public java.lang.String editProfessorInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException;
+    public java.lang.String adminAddCourse(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException;
+    public java.lang.String deleteProfessorInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException;
+    public java.lang.String addCourseToCart(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException;
+    public java.lang.String assignCourseToAProfessor() throws java.rmi.RemoteException;
+    public java.lang.String editStudentInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException;
+    public java.lang.String removeCourseFromCart(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException;
+    public edu.cmpe273.univserver.beans.StudentCourse[] viewRegisteredCourse(java.lang.String sjsuid) throws java.rmi.RemoteException;
+    public java.lang.String editCourseAssignedToAProfessor() throws java.rmi.RemoteException;
+    public edu.cmpe273.univserver.beans.Person listAllProfessorss() throws java.rmi.RemoteException;
+    public edu.cmpe273.univserver.beans.Person listAllStudents() throws java.rmi.RemoteException;
+    public java.lang.String testService() throws java.rmi.RemoteException;
+}

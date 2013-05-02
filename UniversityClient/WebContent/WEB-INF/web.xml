@@ -9,4 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ActionServlet</display-name>
+    <servlet-name>ActionServlet</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.ActionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ActionServlet</servlet-name>
+    <url-pattern>/ActionServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
