@@ -6,8 +6,8 @@
     <title>San Jose State University System-ADMIN </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
-	<link href="../css/style.css" rel="stylesheet" media="screen">
+    <link href="<%=request.getContextPath() %>/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="<%=request.getContextPath() %>/css/style.css" rel="stylesheet" media="screen">
   </head>
   <body>
   <div class = "container">
@@ -39,14 +39,14 @@
 			<div id="slider" class="carousel slide">
 				<div class="carousel-inner">
 					<div class="item">
-						<img src="../img/sjsu.jpg">
+						<img src="<%=request.getContextPath() %>/img/sjsu.jpg">
 						<div class="carousel-caption">
 							<h4> SJSU VIRTUAL TOUR </h4>
 
 				</div>
 				</div>
 				<div class="item active">
-						<img src="../img/bldng.jpg">
+						<img src="<%=request.getContextPath() %>/img/bldng.jpg">
 						<div class="carousel-caption">
 							<h4> SJSU VIRTUAL TOUR </h4>
 
