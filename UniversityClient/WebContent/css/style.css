@@ -51,3 +51,10 @@
 	margin-top: 15px;
 	
 }
+
+.error{
+	color: red;
+	padding: 20px 0;
+	text-align: left;
+}
+
