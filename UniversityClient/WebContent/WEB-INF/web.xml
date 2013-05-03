@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>UniversityClient</display-name>
   <welcome-file-list>
-    <welcome-file>Login.jsp</welcome-file>
+    <welcome-file>view/Login.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
     <description></description>
@@ -23,5 +23,15 @@
   <servlet-mapping>
     <servlet-name>InvoiceServlet</servlet-name>
     <url-pattern>/InvoiceServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Login</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
   </servlet-mapping>
 </web-app>

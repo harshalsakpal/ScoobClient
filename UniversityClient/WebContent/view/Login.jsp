@@ -31,7 +31,7 @@
 									onclick="validateForm();"> <input type="reset"
 									class="btn btn-primary" value="Reset">
 								<p>
-									<a href="Register.jsp">New user,Register here!!</a>
+									<a href="<%=request.getContextPath() %>/view/Register.jsp">New user,Register here!!</a>
 								</p>
 
 							</div>
@@ -44,14 +44,14 @@
 				<div id="slider" class="carousel slide">
 					<div class="carousel-inner">
 						<div class="item">
-							<img src="../img/sjsu.jpg">
+							<img src="<%=request.getContextPath() %>/img/sjsu.jpg">
 							<div class="carousel-caption">
 								<h4>SJSU VIRTUAL TOUR</h4>
 
 							</div>
 						</div>
 						<div class="item active">
-							<img src="../img/bldng.jpg">
+							<img src="<%=request.getContextPath() %>/img/bldng.jpg">
 							<div class="carousel-caption">
 								<h4>SJSU VIRTUAL TOUR</h4>
 
