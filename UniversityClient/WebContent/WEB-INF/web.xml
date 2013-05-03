@@ -14,4 +14,14 @@
     <servlet-name>AdminLogin</servlet-name>
     <url-pattern>/view/AdminLogin</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>InvoiceServlet</display-name>
+    <servlet-name>InvoiceServlet</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.InvoiceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InvoiceServlet</servlet-name>
+    <url-pattern>/InvoiceServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
