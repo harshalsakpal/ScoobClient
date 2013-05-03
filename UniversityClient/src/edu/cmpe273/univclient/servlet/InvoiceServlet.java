@@ -40,9 +40,10 @@ public class InvoiceServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		System.out.println("In Invoice Servlet");
 		UniversityServerServiceProxy proxy = new UniversityServerServiceProxy();
+		proxy.setEndpoint("http://localhost:8080/UniversityServer/services/UniversityServerService");
 		StudentCourse[] invoiceReply = proxy.getCourseInvoice("8646111");
 		session.setAttribute("invoiceReply", invoiceReply);
-		response.sendRedirect("view/studentInvoice.jsp");
+		response.sendRedirect("view/StudentInvoice.jsp");
 	}
 
 }
