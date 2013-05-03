@@ -6,8 +6,8 @@
 <title>San Jose State University System-ADMIN</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Bootstrap -->
-<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="../css/style.css" rel="stylesheet" media="screen">
+<link href="<%=request.getContextPath() %>/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="<%=request.getContextPath() %>/css/style.css" rel="stylesheet" media="screen">
 </head>
 <body>
 	<div class="container">
