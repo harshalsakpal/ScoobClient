@@ -14,7 +14,7 @@ text-align: center;
 
 <body>
 <div><b>Sign Up For New Account</b></div><br>
-<form id="form1" method="post" action="../ActionServlet">
+<form id="form1" method="post" action="../InvoiceServlet">
 	
 	<div class="form-row"><span class="label">UserName *</span><input type="text" name="UserName"/>  </div>
 	<div class="form-row"><span class="label">Password *</span><input type="password" name="Password"/>  </div>
