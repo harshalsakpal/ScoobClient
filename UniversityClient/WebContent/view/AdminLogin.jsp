@@ -8,17 +8,41 @@
     <!-- Bootstrap -->
     <link href="<%=request.getContextPath() %>/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link href="<%=request.getContextPath() %>/css/style.css" rel="stylesheet" media="screen">
+	<%@ include file="Proxy.jsp" %>
   </head>
   <body>
+  <%String username=request.getParameter("username");
+	String password=request.getParameter("password");
+  	if(!(username==null||username.equals("")||password==null||password.equals("")))
+  	{
+  		
+  	
+  	
+  	
+	boolean result=proxy.adminSignIn(username, password);
+	
+	
+	if(result)
+	{	session.setAttribute("admin", username);
+		response.sendRedirect("AdminHome.jsp");
+	}
+	else
+	{	
+		out.print("");
+		out.println("<span class=\"invaliduser\">Invalid Username/Password!!!</span>");
+		
+		}
+  	}	
+  %>
   <div class = "container">
 	<div  class = "row" id = "main-content">
 		<div class = "span4" id = "sidebar">
 		<div class = "well">
-		<form action="AdminLogin" method="post">
+		<form method="post">
 		<fieldset>
 		<legend>SJSU Admin Login</legend>
 	
-		
+		<span id="username/Password" class="error"></span>
 		<input type = "text" class = "input-block-level"placeholder="Username" name="username" onkeypress="removeError()">
 		<span id="errorusername" class="error"></span>
 		<input type = "password" class = "input-block-level"placeholder="Password" name="password" onkeypress="removeError()">
@@ -99,6 +123,7 @@
   		if(document.forms[0].password.value!=null|| document.forms[0].password.value!="")
   			document.getElementById("errorpassword").innerHTML="";
   	}
+  	
   </script>
   
   </body>
