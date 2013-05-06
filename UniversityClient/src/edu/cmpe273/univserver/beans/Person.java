@@ -18,6 +18,8 @@ public class Person  implements java.io.Serializable {
 
     private java.lang.String dateOfBirth;
 
+    private java.lang.String department;
+
     private java.lang.String emailid;
 
     private java.lang.String firstName;
@@ -25,8 +27,6 @@ public class Person  implements java.io.Serializable {
     private java.lang.String gender;
 
     private java.lang.String lastName;
-
-    private java.lang.String middleName;
 
     private java.lang.String password;
 
@@ -47,11 +47,11 @@ public class Person  implements java.io.Serializable {
            java.lang.String cityName,
            java.lang.String contactNumber,
            java.lang.String dateOfBirth,
+           java.lang.String department,
            java.lang.String emailid,
            java.lang.String firstName,
            java.lang.String gender,
            java.lang.String lastName,
-           java.lang.String middleName,
            java.lang.String password,
            java.lang.String role,
            java.lang.String sjsuid,
@@ -62,11 +62,11 @@ public class Person  implements java.io.Serializable {
            this.cityName = cityName;
            this.contactNumber = contactNumber;
            this.dateOfBirth = dateOfBirth;
+           this.department = department;
            this.emailid = emailid;
            this.firstName = firstName;
            this.gender = gender;
            this.lastName = lastName;
-           this.middleName = middleName;
            this.password = password;
            this.role = role;
            this.sjsuid = sjsuid;
@@ -176,6 +176,26 @@ public class Person  implements java.io.Serializable {
 
 
     /**
+     * Gets the department value for this Person.
+     * 
+     * @return department
+     */
+    public java.lang.String getDepartment() {
+        return department;
+    }
+
+
+    /**
+     * Sets the department value for this Person.
+     * 
+     * @param department
+     */
+    public void setDepartment(java.lang.String department) {
+        this.department = department;
+    }
+
+
+    /**
      * Gets the emailid value for this Person.
      * 
      * @return emailid
@@ -252,26 +272,6 @@ public class Person  implements java.io.Serializable {
      */
     public void setLastName(java.lang.String lastName) {
         this.lastName = lastName;
-    }
-
-
-    /**
-     * Gets the middleName value for this Person.
-     * 
-     * @return middleName
-     */
-    public java.lang.String getMiddleName() {
-        return middleName;
-    }
-
-
-    /**
-     * Sets the middleName value for this Person.
-     * 
-     * @param middleName
-     */
-    public void setMiddleName(java.lang.String middleName) {
-        this.middleName = middleName;
     }
 
 
@@ -401,6 +401,9 @@ public class Person  implements java.io.Serializable {
             ((this.dateOfBirth==null && other.getDateOfBirth()==null) || 
              (this.dateOfBirth!=null &&
               this.dateOfBirth.equals(other.getDateOfBirth()))) &&
+            ((this.department==null && other.getDepartment()==null) || 
+             (this.department!=null &&
+              this.department.equals(other.getDepartment()))) &&
             ((this.emailid==null && other.getEmailid()==null) || 
              (this.emailid!=null &&
               this.emailid.equals(other.getEmailid()))) &&
@@ -413,9 +416,6 @@ public class Person  implements java.io.Serializable {
             ((this.lastName==null && other.getLastName()==null) || 
              (this.lastName!=null &&
               this.lastName.equals(other.getLastName()))) &&
-            ((this.middleName==null && other.getMiddleName()==null) || 
-             (this.middleName!=null &&
-              this.middleName.equals(other.getMiddleName()))) &&
             ((this.password==null && other.getPassword()==null) || 
              (this.password!=null &&
               this.password.equals(other.getPassword()))) &&
@@ -457,6 +457,9 @@ public class Person  implements java.io.Serializable {
         if (getDateOfBirth() != null) {
             _hashCode += getDateOfBirth().hashCode();
         }
+        if (getDepartment() != null) {
+            _hashCode += getDepartment().hashCode();
+        }
         if (getEmailid() != null) {
             _hashCode += getEmailid().hashCode();
         }
@@ -468,9 +471,6 @@ public class Person  implements java.io.Serializable {
         }
         if (getLastName() != null) {
             _hashCode += getLastName().hashCode();
-        }
-        if (getMiddleName() != null) {
-            _hashCode += getMiddleName().hashCode();
         }
         if (getPassword() != null) {
             _hashCode += getPassword().hashCode();
@@ -528,6 +528,12 @@ public class Person  implements java.io.Serializable {
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("department");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "department"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("emailid");
         elemField.setXmlName(new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "emailid"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
@@ -548,12 +554,6 @@ public class Person  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("lastName");
         elemField.setXmlName(new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "lastName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("middleName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "middleName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);

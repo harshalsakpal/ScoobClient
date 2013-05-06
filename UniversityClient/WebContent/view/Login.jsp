@@ -1,9 +1,10 @@
+<%@page import="edu.cmpe273.univserver.beans.Person"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
   <head>
-    <title>San Jose State University System </title>
+    <title>San Jose State University System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="<%=request.getContextPath() %>/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -11,20 +12,30 @@
 	<%@ include file="Proxy.jsp" %>
   </head>
   <body>
+  
   <%String username=request.getParameter("username");
 	String password=request.getParameter("password");
   	if(!(username==null||username.equals("")||password==null||password.equals("")))
   	{
   		
   	
+  
   	
-  	
-	boolean result=proxy.adminSignIn(username, password);
+	Person p=proxy.signIn(username, password);
 	
 	
-	if(result)
-	{	session.setAttribute("user", username);
-		response.sendRedirect("MemberHome.jsp");
+	if(p!=null)
+	{	
+		session.setAttribute("user", p.getSjsuid());
+		String ctx=request.getContextPath();
+		if(p.getRole().equalsIgnoreCase("STUDENT"))
+		{
+			response.sendRedirect(ctx+"/view/StudentHome.jsp");
+		}
+		else
+		{
+			response.sendRedirect(ctx+"/view/InstructorHome.jsp");
+		}
 	}
 	else
 	{	
@@ -51,16 +62,17 @@
 		<div class = "pull-right" align="center">
 			<input type = "button" class = "btn btn-primary" value = "Login" onclick="validateForm();">
 			<input type = "reset" class = "btn btn-primary" value = "Reset">
-			
 								<p>
 									<a href="<%=request.getContextPath() %>/view/Register.jsp">New user,Register here!!</a>
 								</p>
+		
 		</div>
 		</fieldset>
 		</form>
 		</div>
 		</div>
-
+<br>
+<br>
 		<div class="span8">
 			<div id="slider" class="carousel slide">
 				<div class="carousel-inner">
