@@ -18,9 +18,7 @@ public class Course  implements java.io.Serializable {
 
     private java.lang.String department;
 
-    private java.lang.String professorName;
-
-    private java.lang.String sectionNumber;
+    private java.lang.String section;
 
     public Course() {
     }
@@ -31,15 +29,13 @@ public class Course  implements java.io.Serializable {
            java.lang.String courseNumber,
            java.lang.String credits,
            java.lang.String department,
-           java.lang.String professorName,
-           java.lang.String sectionNumber) {
+           java.lang.String section) {
            this.courseDesc = courseDesc;
            this.courseName = courseName;
            this.courseNumber = courseNumber;
            this.credits = credits;
            this.department = department;
-           this.professorName = professorName;
-           this.sectionNumber = sectionNumber;
+           this.section = section;
     }
 
 
@@ -144,42 +140,22 @@ public class Course  implements java.io.Serializable {
 
 
     /**
-     * Gets the professorName value for this Course.
+     * Gets the section value for this Course.
      * 
-     * @return professorName
+     * @return section
      */
-    public java.lang.String getProfessorName() {
-        return professorName;
+    public java.lang.String getSection() {
+        return section;
     }
 
 
     /**
-     * Sets the professorName value for this Course.
+     * Sets the section value for this Course.
      * 
-     * @param professorName
+     * @param section
      */
-    public void setProfessorName(java.lang.String professorName) {
-        this.professorName = professorName;
-    }
-
-
-    /**
-     * Gets the sectionNumber value for this Course.
-     * 
-     * @return sectionNumber
-     */
-    public java.lang.String getSectionNumber() {
-        return sectionNumber;
-    }
-
-
-    /**
-     * Sets the sectionNumber value for this Course.
-     * 
-     * @param sectionNumber
-     */
-    public void setSectionNumber(java.lang.String sectionNumber) {
-        this.sectionNumber = sectionNumber;
+    public void setSection(java.lang.String section) {
+        this.section = section;
     }
 
     private java.lang.Object __equalsCalc = null;
@@ -209,12 +185,9 @@ public class Course  implements java.io.Serializable {
             ((this.department==null && other.getDepartment()==null) || 
              (this.department!=null &&
               this.department.equals(other.getDepartment()))) &&
-            ((this.professorName==null && other.getProfessorName()==null) || 
-             (this.professorName!=null &&
-              this.professorName.equals(other.getProfessorName()))) &&
-            ((this.sectionNumber==null && other.getSectionNumber()==null) || 
-             (this.sectionNumber!=null &&
-              this.sectionNumber.equals(other.getSectionNumber())));
+            ((this.section==null && other.getSection()==null) || 
+             (this.section!=null &&
+              this.section.equals(other.getSection())));
         __equalsCalc = null;
         return _equals;
     }
@@ -241,11 +214,8 @@ public class Course  implements java.io.Serializable {
         if (getDepartment() != null) {
             _hashCode += getDepartment().hashCode();
         }
-        if (getProfessorName() != null) {
-            _hashCode += getProfessorName().hashCode();
-        }
-        if (getSectionNumber() != null) {
-            _hashCode += getSectionNumber().hashCode();
+        if (getSection() != null) {
+            _hashCode += getSection().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -288,14 +258,8 @@ public class Course  implements java.io.Serializable {
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("professorName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "professorName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sectionNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "sectionNumber"));
+        elemField.setFieldName("section");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "section"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
