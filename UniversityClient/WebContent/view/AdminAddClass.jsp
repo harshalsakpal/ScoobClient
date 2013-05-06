@@ -9,27 +9,36 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 <%@ include file="AdminHome.jsp" %>
 </head>
-
+<script type="text/javascript">
+	
+</script>
 <body>
-
+ <% if(session.getAttribute("admin")==null)
+	  {
+	  	response.sendRedirect("AdminLogin.jsp");
+	  	return;
+	  }
+	  %>
+	
 	<div class="container control-group">
 		<header class="row">
 			<div class="span12">
 			
 				
 					<div class="well">
-						<form id="Admin-page" method="POST">
+						<form id="Admin-page" method="POST" name="addcourse" onsubmit="return validate(this)">
 								<div>
 
-								<select class="span3">
-									<option value=""disabled selected>Department</option>
-									<option>Computer Engineering</option>
-									<option >Software Engineering</option>
-									<option>Computer Science</option>
-									<option>Electrical Engineering</option>
-									<option>Mechanical Engineering</option>
+								<select class="span3" name="department">
+									
+									<option value="CMPE">Computer Engineering</option>
+									<option value="SE">Software Engineering</option>
+									<option value="CS">Computer Science</option>
+									<option value="EE">Electrical Engineering</option>
+									<option value="ME">Mechanical Engineering</option>
 								</select>
 							</div>
+						      
 							<div class="controls controls-row info">
 								<input type=text class="input-medium required span3"
 									placeholder="Course Number" id="inputinfo" name="course_number"
@@ -55,9 +64,12 @@
 									required="required" rel="popover"
 									data-content="please type the credits">
 							</div>
+
+		
 						
 							<div class="controls controls-row info">
 								<textarea class="span3" placeholder="Course Description"
+									required="required" rel="popover"
 									name="description" id="description" rows="3">Course Description </textarea>
 							</div>
 							<div>
@@ -71,6 +83,10 @@
 
 		<script src="http://code.jquery.com/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+   <script src="../js/bootstrap-select.js"></script>
+
+
+     
 	</div>
 
 

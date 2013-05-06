@@ -8,7 +8,12 @@
 <title>Student Invoice</title>
 </head>
 <body>
-
+ <% if(session.getAttribute("user")==null)
+	  {
+	  	response.sendRedirect("Login.jsp");
+	  	return;
+	  }
+	  %>
   <div class = "container">
 	<div  class = "row" id = "main-content">
 		<div class = "well">
