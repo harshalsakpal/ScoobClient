@@ -60,5 +60,6 @@
 .invaliduser
 {
 	color:red;
-	text-align: center;
+	padding: 20px 0;
+	text-align: right;
 }
