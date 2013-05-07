@@ -45,4 +45,14 @@
     <servlet-name>RegisterServlet</servlet-name>
     <url-pattern>/RegisterServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdminAddCourse</display-name>
+    <servlet-name>AdminAddCourse</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.AdminAddCourse</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminAddCourse</servlet-name>
+    <url-pattern>/AdminAddCourse</url-pattern>
+  </servlet-mapping>
 </web-app>
