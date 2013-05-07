@@ -85,4 +85,43 @@
     <servlet-name>UpdateProfessor</servlet-name>
     <url-pattern>/UpdateProfessor</url-pattern>
   </servlet-mapping>
+   <servlet>
+    <display-name>AdminDeleteClass</display-name>
+    <servlet-name>AdminDeleteClass</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.AdminDeleteClass</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminDeleteClass</servlet-name>
+    <url-pattern>/AdminDeleteClass</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GetCourseClass</display-name>
+    <servlet-name>GetCourseClass</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.GetCourseClass</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetCourseClass</servlet-name>
+    <url-pattern>/GetCourseClass</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdminUpdateCourse</display-name>
+    <servlet-name>AdminUpdateCourse</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.AdminUpdateCourse</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminUpdateCourse</servlet-name>
+    <url-pattern>/AdminUpdateCourse</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AssignClass</display-name>
+    <servlet-name>AssignClass</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.AssignClass</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AssignClass</servlet-name>
+    <url-pattern>/AssignClass</url-pattern>
+  </servlet-mapping>
 </web-app>
