@@ -70,6 +70,7 @@ public class RegisterServlet extends HttpServlet {
 			person.setCityName(request.getParameter("city"));
 		}
 		if(request.getParameter("state")!=null || !"".equals(request.getParameter("state"))){
+			System.out.println("StateName in servlet");
 			person.setStateName(request.getParameter("state"));
 		}
 		if(request.getParameter("zipcode")!=null || !"".equals(request.getParameter("zipcode"))){
@@ -85,8 +86,13 @@ public class RegisterServlet extends HttpServlet {
 		UniversityServerServiceProxy proxy = new UniversityServerServiceProxy();
 		proxy.setEndpoint("http://localhost:8080/UniversityServer/services/UniversityServerService");
 		String registerReply = proxy.registerUser(person);
+		System.out.println("Reply from service is :: "+registerReply);
 		session.setAttribute("registerReply", registerReply);
-		response.sendRedirect("view/Register.jsp");
+		
+		if("Email id already Exists".equals(registerReply))
+			response.sendRedirect("view/Register.jsp");
+		else
+			response.sendRedirect("view/Login.jsp");
 		
 	}
 }

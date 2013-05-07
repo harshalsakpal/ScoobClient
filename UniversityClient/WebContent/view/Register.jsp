@@ -105,7 +105,7 @@
 									<option value="">WI</option>
 									<option value="">WY</option>
 								</select> 
-								<input type="text" class="span2" placeholder="ZipCode" name="zip" id="zip" maxlength="5" onkeypress="removeError()">
+								<input type="text" class="span2" placeholder="ZipCode" name="zipcode" id="zipcode" maxlength="5" onkeypress="removeError()">
 								<span id="ziperror" class="error"></span>
 							</div>
 
@@ -127,11 +127,15 @@
 				
 								<button class="btn btn-danger" data-dismiss="modal"	aria-hidden="true">cancel</button>
 				
-								<input type="button" class="btn btn-success" value="Register" onclick="doContinue()">
+								<input type="button" class="btn btn-success" value="Register" onclick="return doContinue()">
 								
 								<input type="reset" class="btn btn-info" value="Reset">
 				
-				
+				<%
+					if(session.getAttribute("registerReply")!=null){%> 
+						<%=session.getAttribute("registerReply") %>	
+					
+					<%}	%>
 				</div>
 			</form>
 			</div>
@@ -195,25 +199,28 @@
 		if (document.forms[0].email.value != null
 				|| document.forms[0].email.value != "")
 			document.getElementById("emailerror").innerHTML = "";
-		if (document.forms[0].zip.value != null
-				|| document.forms[0].zip.value != "")
+		if (document.forms[0].zipcode.value != null
+				|| document.forms[0].zipcode.value != "")
 			document.getElementById("ziperror").innerHTML = "";
 		
 	}
 	function doContinue(){
 		var email = $("#email").val();
-		var zip=$("#zip").val();
+		var zipcode=$("#zipcode").val();
 		var password = $("#password").val();
 		var repassword = $("#repassword").val();
 		if(password != repassword){
 	    	document.getElementById("passworderror").innerHTML = "Password doesnot match";
+	    	return false;
 		}
 		
 		if(!validateEmailid(email)){
 	    	document.getElementById("emailerror").innerHTML = "Email id is not valid";
+	    	return false;
 			}
-		if(!validateZip(zip)){
+		if(!validateZip(zipcode)){
 			document.getElementById("ziperror").innerHTML="Zip not valid";
+			return false;
 			}
 	    document.forms[0].action = '../RegisterServlet';
 	    document.forms[0].submit();
