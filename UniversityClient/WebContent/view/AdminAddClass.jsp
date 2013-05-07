@@ -16,13 +16,13 @@
 </script>
 <body>
 			
-							 <% 
-							 	if(session.getAttribute("admin")==null)
-								  {
-								  	response.sendRedirect("AdminLogin.jsp");
-								  	return;
-								  }
-								  %>
+			 <% 
+			 	if(session.getAttribute("admin")==null)
+				  {
+				  	response.sendRedirect("AdminLogin.jsp");
+				  	return;
+				  }
+				  %>
 	<div class="container control-group">
 		<header class="row">
 			<div class="span12">
@@ -186,3 +186,4 @@
 
 
 </body>
+</html>
