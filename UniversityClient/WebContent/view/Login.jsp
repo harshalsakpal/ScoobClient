@@ -47,14 +47,14 @@
 		<div class = "span4" id = "sidebar">
 		<div class = "well">
 		<form method="post">
-		SJSU ID Created
+		
 			<%
 					if(session.getAttribute("registerReply")!=null){%> 
-						<%=session.getAttribute("registerReply") %>	
-					
-					<%}	%>
-					<br>
+					SJSU ID Created
+						<%=session.getAttribute("registerReply") %>	<br>
 					Please use ID For Login
+					<%}	%>
+					
 		<fieldset>
 		<legend>SJSU Member Login</legend>
 	
