@@ -18,10 +18,7 @@
   	if(!(username==null||username.equals("")||password==null||password.equals("")))
   	{
   		
-  	
-  
-  	
-	Person p=proxy.signIn(username, password);
+		Person p=proxy.signIn(username, password);
 	
 	
 	if(p!=null)
@@ -50,6 +47,14 @@
 		<div class = "span4" id = "sidebar">
 		<div class = "well">
 		<form method="post">
+		
+			<%
+					if(session.getAttribute("registerReply")!=null){%> 
+					SJSU ID Created
+						<%=session.getAttribute("registerReply") %>	<br>
+					Please use ID For Login
+					<%}	%>
+					
 		<fieldset>
 		<legend>SJSU Member Login</legend>
 	
