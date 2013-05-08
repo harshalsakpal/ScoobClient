@@ -7,38 +7,15 @@
 <head>
 <title>Update User Details</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<%	String context = request.getContextPath();%>
+<%
+	String context = request.getContextPath();
+%>
 <!-- Bootstrap -->
-<link href="<%=context%>/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="<%=context%>/css/bootstrap.min.css" rel="stylesheet"
+	media="screen">
 <%@ include file="AdminHome.jsp"%>
 <%@ include file="Proxy.jsp"%>
 </head>
-<script type="text/javascript">
-	function preselectMyItem(state, department) {
-		// Get a reference to the drop-down
-		var myDropdownList1 = document.forms[0].state;
-		var myDropdownList2 = document.forms[0].department;
-
-		// Loop through all the items
-		for ( var iLoop = 0; iLoop < myDropdownList1.options.length; iLoop++) {
-			if (myDropdownList1.options[iLoop].value == state) {
-				// Item is found. Set its selected property, and exit the loop
-				myDropdownList1.options[iLoop].selected = true;
-				break;
-			}
-		}
-
-		// Loop through all the items
-		for ( var iLoop = 0; iLoop < myDropdownList2.options.length; iLoop++) {
-			if (myDropdownList2.options[iLoop].value == department) {
-				// Item is found. Set its selected property, and exit the loop
-				myDropdownList2.options[iLoop].selected = true;
-				break;
-			}
-		}
-
-	}
-</script>
 <%
 	String state = "", department = "";
 	if (session.getAttribute("instructorDetails") != null) {
@@ -61,12 +38,13 @@
 			return;
 		}
 	%>
-
+<form method="post" name="updateProfessorData">
+<input type="hidden" name="hiddensjsuid" value=""> 
 	<div class="container control-group">
 		<header class="row">
 			<div class="span12">
 				<div class="well">
-					<form method="post" name="updateProfessorData">
+					
 						<%
 							if (session.getAttribute("instructorDetails") != null) {
 								Person person = (Person) session
@@ -108,11 +86,6 @@
 								<td><input type="text" value=<%=person.getCityName()%>
 									name="cityName" disabled="disabled"></td>
 							</tr>
-
-							<%-- 	<tr>
-						<td>State</td>
-						<td><input type="text" value=<%=person.getStateName() %> name="stateName" disabled="disabled"></td>
-						</tr> --%>
 
 							<tr>
 								<td>State</td>
@@ -173,7 +146,7 @@
 							<tr>
 								<td>Zip</td>
 								<td><input type="text" value=<%=person.getZipCode()%>
-									name="zipCode" disabled="disabled"></td>
+									name="zipCode" disabled="disabled" maxlength="5"></td>
 							</tr>
 
 							<tr>
@@ -202,9 +175,6 @@
 								<td><input type="text" value=<%=person.getGender()%>
 									name="gender" disabled="disabled"></td>
 							</tr>
-							<%-- <tr><td>Department</td>
-						<td><input type="text" value=<%=person.getDepartment() %> name="department" disabled="disabled"></td>
-						</tr>	 --%>
 							<tr>
 								<td>Department</td>
 								<td><select class="selectpicker" name="department"
@@ -218,10 +188,9 @@
 							</tr>
 						</table>
 
-						<input type="button" class="btn btn-success" value="Submit"
-							name="submit" onclick="doUpdate()" disabled="disabled">
-
-						<input type="button" class="btn btn-info" value="Edit" name="edit"
+						<input type="button" class="btn btn-success" value="Update"
+							name="Update" onclick="doUpdate()" disabled="disabled"> <input
+							type="button" class="btn btn-info" value="Edit" name="edit"
 							onclick="enableFields()">
 
 						<%
@@ -230,75 +199,45 @@
 						<%=session.getAttribute("instructorDetailsMessage")%>
 						<%
 							}
-						%>
-					</form>
+					
+					if(session.getAttribute("updateReply")!=null){%> 
+						<%=session.getAttribute("updateReply") %>	
+					
+					<%}	%>
 				</div>
 			</div>
 		</header>
 	</div>
-	<script src="http://code.jquery.com/jquery.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+</form>	
 	<script src="../js/bootstrap-datepicker.js"></script>
 	<script type="text/javascript">
-		function doUpdate() {
-			document.updateProfessorData.action = '../UpdateUserDetails';
-			document.updateProfessorData.submit();
-		}
+		function preselectMyItem(state, department) {
+			// Get a reference to the drop-down
+			var myDropdownList1 = document.forms[0].state;
+			var myDropdownList2 = document.forms[0].department;
 
-		function validateStringWithSpaces(input){
-			var pattern = /[a-zA-z ]+/;
-			if (pattern.test(input))
-				return true;
-			else
-				return false;
-		}
-		
-		function validateString(input) {
-
-			var pattern = /[a-zA-z]+/;
-			if (pattern.test(input))
-				return true;
-			else
-				return false;
-		}
-
-		function validateEmailid(email) {
-			var pattern = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
-			if (pattern.test(email))
-				return true;
-			else
-				return false;
-		}
-
-		function validateZip(zip) {
-			var zip_pattern = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
-
-			if (zip_pattern.test(zip))
-				return true;
-			else
-				return false;
-		}
-
-		function doContinue() {
-			var sjsuid = document.updateProfessorData.sjsuid.value;
-
-			if (sjsuid == null || sjsuid == "") {
-				document.getElementById("sjsuiderror").innerHTML = "Please Enter SJSU ID";
-				return false;
+			// Loop through all the items
+			for ( var iLoop = 0; iLoop < myDropdownList1.options.length; iLoop++) {
+				if (myDropdownList1.options[iLoop].value == state) {
+					// Item is found. Set its selected property, and exit the loop
+					myDropdownList1.options[iLoop].selected = true;
+					break;
+				}
 			}
-			document.updateProfessorData.action = '../UpdateProfessor';
-			document.updateProfessorData.submit();
-		}
 
-		function removeError() {
-			var sjsuid = document.updateProfessor.sjsuid.value;
-			if (sjsuid != null || sjsuid != "") {
-				document.getElementById("sjsuiderror").innerHTML = "";
+			// Loop through all the items
+			for ( var iLoop = 0; iLoop < myDropdownList2.options.length; iLoop++) {
+				if (myDropdownList2.options[iLoop].value == department) {
+					// Item is found. Set its selected property, and exit the loop
+					myDropdownList2.options[iLoop].selected = true;
+					break;
+				}
 			}
+
 		}
 
 		function enableFields() {
-			document.updateProfessorData.submit.disabled = false;
+			document.updateProfessorData.Update.disabled = false;
 			document.updateProfessorData.edit.disabled = true;
 			document.updateProfessorData.department.disabled = false;
 			document.updateProfessorData.firstName.disabled = false;
@@ -311,8 +250,12 @@
 			document.updateProfessorData.emailid.disabled = false;
 			document.updateProfessorData.password.disabled = false;
 			document.updateProfessorData.dateOfBirth.disabled = false;
-			//document.updateProfessor.gender.disabled = false;
+		}
 
+		function doUpdate() {
+			document.updateProfessorData.hiddensjsuid.value  =document.updateProfessorData.sjsuidinput.value;
+			document.forms[0].action = '../UpdateUserDetails';
+			document.forms[0].submit();
 		}
 		$(function() {
 			$('#dp3').datepicker();

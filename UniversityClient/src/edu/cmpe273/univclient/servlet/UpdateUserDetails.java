@@ -40,8 +40,8 @@ public class UpdateUserDetails extends HttpServlet {
 		Person person = new Person(); 
 		HttpSession session = request.getSession();
 		
-		if(request.getParameter("sjsuidinput")!=null || !"".equals(request.getParameter("sjsuidinput"))){
-			person.setFirstName(request.getParameter("sjsuidinput"));
+		if(request.getParameter("hiddensjsuid")!=null || !"".equals(request.getParameter("hiddensjsuid"))){
+			person.setSjsuid(request.getParameter("hiddensjsuid"));
 		}
 		if(request.getParameter("firstName")!=null || !"".equals(request.getParameter("firstName"))){
 			person.setFirstName(request.getParameter("firstName"));
@@ -53,13 +53,13 @@ public class UpdateUserDetails extends HttpServlet {
 			person.setGender(request.getParameter("gender"));
 		}	
 		if(request.getParameter("dateOfBirth")!=null || !"".equals(request.getParameter("dateOfBirth"))){
-			person.setDateOfBirth(request.getParameter("dateofbirth"));
+			person.setDateOfBirth(request.getParameter("dateOfBirth"));
 		}	
 		if(request.getParameter("addrLine1")!=null || !"".equals(request.getParameter("addrLine1"))){
-			person.setAddrLine1(request.getParameter("address1"));
+			person.setAddrLine1(request.getParameter("addrLine1"));
 		}	
 		if(request.getParameter("addrLine2")!=null || !"".equals(request.getParameter("addrLine2"))){
-			person.setAddrLine2(request.getParameter("address2"));
+			person.setAddrLine2(request.getParameter("addrLine2"));
 		}	
 		if(request.getParameter("emailid")!=null || !"".equals(request.getParameter("emailid"))){
 			person.setEmailid(request.getParameter("emailid"));
@@ -68,13 +68,13 @@ public class UpdateUserDetails extends HttpServlet {
 			person.setPassword(request.getParameter("password"));
 		}	
 		if(request.getParameter("cityName")!=null || !"".equals(request.getParameter("cityName"))){
-			person.setCityName(request.getParameter("city"));
+			person.setCityName(request.getParameter("cityName"));
 		}
 		if(request.getParameter("state")!=null || !"".equals(request.getParameter("state"))){
 			person.setStateName(request.getParameter("state"));
 		}
 		if(request.getParameter("zipCode")!=null || !"".equals(request.getParameter("zipCode"))){
-			person.setZipCode(request.getParameter("zipcode"));
+			person.setZipCode(request.getParameter("zipCode"));
 		}
 		if(request.getParameter("role")!=null || !"".equals(request.getParameter("role"))){
 			person.setRole(request.getParameter("role"));
@@ -85,11 +85,11 @@ public class UpdateUserDetails extends HttpServlet {
 
 		UniversityServerServiceProxy proxy = new UniversityServerServiceProxy();
 		proxy.setEndpoint("http://localhost:8080/UniversityServer/services/UniversityServerService");
-		String registerReply = proxy.editProfessorInformation(person);
-		System.out.println("Reply from service is :: "+registerReply);
-		session.setAttribute("registerReply", registerReply);
+		String updateReply = proxy.editProfessorInformation(person);
+		System.out.println("Reply from service is :: "+updateReply);
+		session.setAttribute("updateReply", updateReply);
 		
-		if("Update Success".equals(registerReply))
+		if("Update Success".equals(updateReply))
 			response.sendRedirect("view/UpdateProferssorDetails.jsp");
 		else
 			response.sendRedirect("view/updateUserDetailsData.jsp");
