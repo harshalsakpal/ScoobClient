@@ -174,4 +174,14 @@
     <servlet-name>AddCourseToStudent</servlet-name>
     <url-pattern>/AddCourseToStudent</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DropCourseToStudent</display-name>
+    <servlet-name>DropCourseToStudent</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.DropCourseToStudent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DropCourseToStudent</servlet-name>
+    <url-pattern>/view/DropCourseToStudent</url-pattern>
+  </servlet-mapping>
 </web-app>

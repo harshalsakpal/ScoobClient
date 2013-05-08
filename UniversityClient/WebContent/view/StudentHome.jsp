@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Iterator"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -52,7 +54,7 @@
                       <li class="divider-vertical"></li>
                       <li><a href="Logout.jsp"><i class="icon-signout"></i>Signout </a></li>
                       <li class="divider-vertical"></li>
-
+				
                    </ul>
                     </div>
              </nav>
@@ -63,12 +65,34 @@
       <div class="row" id="main-content"></div>
       <footer class="row">
       </footer>
+      
 	<%
-		if(session.getAttribute("addCourseMessage")!=null){%>
+		if(session.getAttribute("coursesadded")!=null){%>
+			<%="Successfully Enrolled Courses" %>
+			<%Iterator i =((ArrayList)session.getAttribute("coursesadded")).iterator();
+			while(i.hasNext())
+			{
 				
-		<%= session.getAttribute("addCourseMessage")%>	
+			%>
+				
+		<%= i.next()%>	
 			
-		<% }%>
+		<% }}
+		session.removeAttribute("coursesadded");%>
+		
+			<%
+		if(session.getAttribute("coursedropped")!=null){%>
+			<%="Successfully Dropped Courses" %>
+			<%Iterator i =((ArrayList)session.getAttribute("coursedropped")).iterator();
+			while(i.hasNext())
+			{
+				
+			%>
+				
+		<%= i.next()%>	
+			
+		<% }}
+		session.removeAttribute("coursedropped");%>
 	
   
    
