@@ -63,7 +63,13 @@
       <div class="row" id="main-content"></div>
       <footer class="row">
       </footer>
-
+	<%
+		if(session.getAttribute("addCourseMessage")!=null){%>
+				
+		<%= session.getAttribute("addCourseMessage")%>	
+			
+		<% }%>
+	
   
    
    

@@ -164,4 +164,14 @@
     <servlet-name>UpdateStudData</servlet-name>
     <url-pattern>/UpdateStudData</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddCourseToStudent</display-name>
+    <servlet-name>AddCourseToStudent</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.AddCourseToStudent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddCourseToStudent</servlet-name>
+    <url-pattern>/AddCourseToStudent</url-pattern>
+  </servlet-mapping>
 </web-app>

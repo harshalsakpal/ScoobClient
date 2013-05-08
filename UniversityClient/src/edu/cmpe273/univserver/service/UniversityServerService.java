@@ -27,10 +27,11 @@ public interface UniversityServerService extends java.rmi.Remote {
     public java.lang.String adminDeleteCourse(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException;
     public edu.cmpe273.univserver.beans.InstructorCourse[] viewAssignedCourses(java.lang.String sjsuid) throws java.rmi.RemoteException;
     public edu.cmpe273.univserver.beans.StudentCourse[] getCourseInvoice(java.lang.String sjsuid) throws java.rmi.RemoteException;
+    public int addCourseInBatch(edu.cmpe273.univserver.beans.Course[] co) throws java.rmi.RemoteException;
     public java.lang.String testService() throws java.rmi.RemoteException;
     public edu.cmpe273.univserver.beans.Person signIn(java.lang.String username, java.lang.String password) throws java.rmi.RemoteException;
     public boolean adminSignIn(java.lang.String username, java.lang.String password) throws java.rmi.RemoteException;
-    public java.lang.String addCourse(edu.cmpe273.univserver.beans.StudentCourse studentCourse) throws java.rmi.RemoteException;
+    public java.lang.String addCourse(java.lang.String sjsuid, java.lang.String courseNumber, java.lang.String courseName, java.lang.String section, java.lang.String day, java.lang.String time, java.lang.String location) throws java.rmi.RemoteException;
     public java.lang.String dropCourse(java.lang.String sjsu_id, java.lang.String name) throws java.rmi.RemoteException;
     public java.lang.String registerUser(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException;
     public edu.cmpe273.univserver.beans.Course getCourseDetails(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException;

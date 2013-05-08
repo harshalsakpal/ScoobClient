@@ -32,7 +32,7 @@
 			<div class="span12">
 				<div class="well">
 					<form method="post" name="addCourse">
-
+					<input type="hidden" name="hiddenselectedcourses">
 						<select class="selectpicker" name="department" title="department">
 							<option value="CMPE">Computer Engineering</option>
 							<option value="SE">Software Engineering</option>
@@ -56,8 +56,8 @@
 						if(session.getAttribute("coursesReply")!=null){	
 						Course[] course = (Course[]) session.getAttribute("coursesReply");
 						%>
-					<table align="center">
-						<tr>
+					<table align="center" border="1">
+						<tr align="left">
 							<td>Course Number</td>
 							<td>Course Name</td>
 							<td>Section Number</td>
@@ -65,7 +65,7 @@
 							<td>Day</td>
 							<td>Location</td>
 							<td>Time</td>
-							<td>Department</td>													
+							<td>Select</td>
 						</tr>
 						<%
 						for(int iCount=0; iCount<course.length; iCount++){%>
@@ -76,12 +76,22 @@
 							<td><%=course[iCount].getCredits() %></td>
 							<td><%=course[iCount].getDay() %></td>
 							<td><%=course[iCount].getLocation() %></td>
-							<td><%=course[iCount].getDepartment() %></td>
+							<td><%=course[iCount].getTime() %></td>
+							<td><input type="checkbox" name="checkedCourses" value=<%=course[iCount].getCourseNumber()+","+course[iCount].getCourseName()+","+course[iCount].getSection()+","+course[iCount].getDay()+","+course[iCount].getTime()+","+course[iCount].getLocation()%> > </td>
 						</tr>	
+						
 						<%}	%>
+						<tr>
+						<td><div class="controls controls-row info"><input type="button" name="addCourse" value="Add Courses" onclick="addCourses()"> </div></td>
+						</tr>
+					
 					</table>
+					
 					<%}else{ %>
 					<%} %>
+					
+					
+					
 					</form>
 				</div>
 			</div>
@@ -98,6 +108,25 @@
 		}
 	   document.forms[0].action = '../SearchCourses';
 	   document.forms[0].submit();
+	}
+
+	function addCourses(){
+
+	if(document.forms[0].checkedCourses.length==0)
+		return false;
+	
+	var selctedCourseList = new Array() ;
+	// Loop through all the items
+	for ( var iLoop = 0; iLoop < document.forms[0].checkedCourses.length; iLoop++) {
+		if (document.forms[0].checkedCourses[iLoop].checked == true) {
+			// Item is found. Set its selected property, and exit the loop
+			selctedCourseList = document.forms[0].checkedCourses[iLoop].value;
+		}
+	}
+
+	   document.forms[0].action = '../AddCourseToStudent';
+	   document.forms[0].submit();
+	
 	}
 	</script>
 

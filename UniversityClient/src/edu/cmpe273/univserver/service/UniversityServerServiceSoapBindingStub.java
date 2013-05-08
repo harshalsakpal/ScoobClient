@@ -16,7 +16,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
     static org.apache.axis.description.OperationDesc [] _operations;
 
     static {
-        _operations = new org.apache.axis.description.OperationDesc[27];
+        _operations = new org.apache.axis.description.OperationDesc[28];
         _initOperationDesc1();
         _initOperationDesc2();
         _initOperationDesc3();
@@ -236,10 +236,12 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _operations[18] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("testService");
-        oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        oper.setReturnClass(java.lang.String.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "testServiceReturn"));
+        oper.setName("addCourseInBatch");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "co"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "Course"), edu.cmpe273.univserver.beans.Course[].class, false, false);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        oper.setReturnClass(int.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "addCourseInBatchReturn"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
         _operations[19] = oper;
@@ -249,6 +251,15 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
     private static void _initOperationDesc3(){
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("testService");
+        oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        oper.setReturnClass(java.lang.String.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "testServiceReturn"));
+        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[20] = oper;
+
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("signIn");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "username"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
@@ -260,7 +271,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         oper.setReturnQName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "signInReturn"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[20] = oper;
+        _operations[21] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("adminSignIn");
@@ -273,18 +284,30 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         oper.setReturnQName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "adminSignInReturn"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[21] = oper;
+        _operations[22] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("addCourse");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "studentCourse"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "StudentCourse"), edu.cmpe273.univserver.beans.StudentCourse.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "sjsuid"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+        oper.addParameter(param);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "courseNumber"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+        oper.addParameter(param);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "courseName"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+        oper.addParameter(param);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "section"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+        oper.addParameter(param);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "day"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+        oper.addParameter(param);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "time"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+        oper.addParameter(param);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "location"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         oper.setReturnClass(java.lang.String.class);
         oper.setReturnQName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "addCourseReturn"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[22] = oper;
+        _operations[23] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("dropCourse");
@@ -297,7 +320,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         oper.setReturnQName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "dropCourseReturn"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[23] = oper;
+        _operations[24] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("registerUser");
@@ -308,7 +331,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         oper.setReturnQName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "registerUserReturn"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[24] = oper;
+        _operations[25] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("getCourseDetails");
@@ -319,7 +342,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         oper.setReturnQName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "getCourseDetailsReturn"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[25] = oper;
+        _operations[26] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("editCourseAssignedToAProfessor");
@@ -328,7 +351,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         oper.setReturnQName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "editCourseAssignedToAProfessorReturn"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[26] = oper;
+        _operations[27] = oper;
 
     }
 
@@ -1101,12 +1124,46 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
-    public java.lang.String testService() throws java.rmi.RemoteException {
+    public int addCourseInBatch(edu.cmpe273.univserver.beans.Course[] co) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
         _call.setOperation(_operations[19]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "addCourseInBatch"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {co});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return ((java.lang.Integer) _resp).intValue();
+            } catch (java.lang.Exception _exception) {
+                return ((java.lang.Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public java.lang.String testService() throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[20]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -1140,7 +1197,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[20]);
+        _call.setOperation(_operations[21]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -1174,7 +1231,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[21]);
+        _call.setOperation(_operations[22]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -1203,12 +1260,12 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
-    public java.lang.String addCourse(edu.cmpe273.univserver.beans.StudentCourse studentCourse) throws java.rmi.RemoteException {
+    public java.lang.String addCourse(java.lang.String sjsuid, java.lang.String courseNumber, java.lang.String courseName, java.lang.String section, java.lang.String day, java.lang.String time, java.lang.String location) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[22]);
+        _call.setOperation(_operations[23]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -1219,7 +1276,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {studentCourse});
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {sjsuid, courseNumber, courseName, section, day, time, location});
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -1242,7 +1299,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[23]);
+        _call.setOperation(_operations[24]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -1276,7 +1333,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[24]);
+        _call.setOperation(_operations[25]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -1310,7 +1367,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[25]);
+        _call.setOperation(_operations[26]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -1344,7 +1401,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[26]);
+        _call.setOperation(_operations[27]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
