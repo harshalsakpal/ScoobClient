@@ -52,7 +52,7 @@
 
 						<input type="button" class="btn btn-success" value="Search"
 							onclick="return doSearchCourses()">
-						<%
+						<%System.out.println(session.getAttribute("courseReply"));
 						if(session.getAttribute("courseReply")!=null){	
 						Course[] course = (Course[]) session.getAttribute("courseReply");
 						%>
@@ -91,7 +91,6 @@
 
 	<script type="text/javascript">
 	function doSearchCourses(){
-		alert(document.addCourse.courseNumber.value);
 		var courseNumber = document.forms[0].courseNumber.value;
 		
 		if(courseNumber==null||courseNumber==""){
