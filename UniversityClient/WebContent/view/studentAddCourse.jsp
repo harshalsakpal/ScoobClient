@@ -52,11 +52,11 @@
 
 						<input type="button" class="btn btn-success" value="Search"
 							onclick="return doSearchCourses()">
-						<%System.out.println(session.getAttribute("courseReply"));
-						if(session.getAttribute("courseReply")!=null){	
-						Course[] course = (Course[]) session.getAttribute("courseReply");
+						<%System.out.println(session.getAttribute("coursesReply"));
+						if(session.getAttribute("coursesReply")!=null){	
+						Course[] course = (Course[]) session.getAttribute("coursesReply");
 						%>
-					<table>
+					<table align="center">
 						<tr>
 							<td>Course Number</td>
 							<td>Course Name</td>
@@ -81,7 +81,6 @@
 						<%}	%>
 					</table>
 					<%}else{ %>
-					No Courses Found!
 					<%} %>
 					</form>
 				</div>
