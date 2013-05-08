@@ -43,10 +43,12 @@ public class UpdateProfessor extends HttpServlet {
 		
 		Person instructorDetails = proxy.searchInstructorInformation(Sjsuid);
 		session.setAttribute("instructorDetails", instructorDetails);
-		if(instructorDetails==null)
+		if(instructorDetails==null){
 			session.setAttribute("instructorDetailsMessage", "No Records Found");
-		response.sendRedirect("view/UpdateProferssorDetails.jsp");
-		
+			response.sendRedirect("view/UpdateProferssorDetails.jsp");
+		}else{
+			response.sendRedirect("view/updateUserDetailsData.jsp");
+		}
 	}
 
 }

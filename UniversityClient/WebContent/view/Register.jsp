@@ -194,7 +194,7 @@
 		
 		
 	</script>
-	<script type="text/javascript">
+<script type="text/javascript">
 	function removeError() {
 		if (document.forms[0].email.value != null
 				|| document.forms[0].email.value != "")
@@ -226,22 +226,7 @@
 	    document.forms[0].submit();
 	}
 
-	function validateEmailid(email){
-		var pattern=/^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
-	    if(pattern.test(email))         
-			return true;   
-	    else   
-			return false; 
-	}
-	function validateZip(zip){
-		var zip_pattern =  /(^\d{5}$)|(^\d{5}-\d{4}$)/;
-			
-			if(zip_pattern.test(zip))
-			return true;
-			else
-				return false;
-	}
-	</script>
+</script>
 
 
 

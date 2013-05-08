@@ -52,8 +52,7 @@
                       <b class="caret"></b> 
                     </a>
                       <ul class="dropdown-menu">
-                            <li><a href="UpdateProferssorDetails.jsp">Edit Instructor Information</a></li>
-                            <li><a href="UpdateStudentDetails.jsp">Edit Student Information</a></li>
+                            <li><a href="UpdateProferssorDetails.jsp">Edit User Information</a></li>
                             <li><a href="DeleteProfessorDetails.jsp">Delete Instructor</a></li>
                             <li><a href="DeleteStudentDetails.jsp">Delete Student</a></li>
                           </ul>
