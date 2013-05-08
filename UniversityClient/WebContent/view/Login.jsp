@@ -24,6 +24,7 @@
 	if(p!=null)
 	{	
 		session.setAttribute("user", p.getSjsuid());
+		session.setAttribute("userobj", p);
 		String ctx=request.getContextPath();
 		if(p.getRole().equalsIgnoreCase("STUDENT"))
 		{

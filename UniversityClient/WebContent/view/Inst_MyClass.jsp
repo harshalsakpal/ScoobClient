@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <%@ include file="Instructor_homepage.jsp" %>
+    <%@ include file="InstructorHome.jsp" %>
 </head>
 <body>
  <div class="container">
@@ -25,14 +25,14 @@
     <hr>
     <%@ include file="Proxy.jsp" %>
     <form action="Inst_Myclass.jsp" method="post"></form>
-    	<%
-    	InstructorCourse[] ic = proxy.viewAssignedCourses("2");
+    	<%System.out.println((String)session.getAttribute("user"));
+    	InstructorCourse[] ic = proxy.viewAssignedCourses((String)session.getAttribute("user"));
     	InstructorCourse i;
     	%>
     
     </div>
        </div>  
-       	<%
+       	<%	if(ic!=null){
          	for(int index=0;index < ic.length; index++)
          	{
          		i= ic[index];
@@ -55,6 +55,9 @@
                            
 							  </div>  
                           </div>
+                            <%} 
+                            }else{%>
+                            No Courses Under Professor
                             <%} %>
                           </div>
                   </div>

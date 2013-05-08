@@ -158,12 +158,6 @@ public class UniversityServerServiceProxy implements edu.cmpe273.univserver.serv
     return universityServerService.adminSignIn(username, password);
   }
   
-  public java.lang.String dropCourse(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.dropCourse(studentCourse);
-  }
-  
   public java.lang.String registerUser(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException{
     if (universityServerService == null)
       _initUniversityServerServiceProxy();
@@ -204,6 +198,12 @@ public class UniversityServerServiceProxy implements edu.cmpe273.univserver.serv
     if (universityServerService == null)
       _initUniversityServerServiceProxy();
     return universityServerService.addCourse(studentCourse);
+  }
+  
+  public java.lang.String dropCourse(java.lang.String sjsu_id, java.lang.String name) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.dropCourse(sjsu_id, name);
   }
   
   

@@ -34,7 +34,7 @@
                       <div class="nav-collapse collapse">
                     <ul class="nav"> 
                       <li class="divider-vertical"></li>
-                      <li><a href="#"><i class="icon-home"></i> Home </a></li>
+                      <li><a href="AdminHome.jsp"><i class="icon-home"></i> Home </a></li>
                       
                       <li class="divider-vertical"></li>
                       <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-book"></i>Courses 
@@ -42,8 +42,8 @@
                           </a>
                           <ul class="dropdown-menu">
                             <li><a href="AdminAddClass.jsp"><i class="icon-folder-plus"></i>Add Course</a></li>
-                            <li><a href="#"><i class="icon-plus"></i>Edit Course</a></li>
-                            <li><a href="#"><i class="icon-remove"></i>Delete Course</a> </li>
+                            <li><a href="AdminEditClass.jsp"><i class="icon-plus"></i>Edit Course</a></li>
+                            <li><a href="AdminDeleteClass.jsp"><i class="icon-remove"></i>Delete Course</a> </li>
 
                               </ul>
                        </li>
@@ -58,7 +58,7 @@
                           </ul>
                           </li>
                           <li class="divider-vertical"></li>
-                      <li><a href="#">Assign </a></li>
+                      <li><a href="AssignCourse.jsp">Assign </a></li>
                       <li class="divider-vertical"></li>
                       <li><a href="AdminLogout.jsp"><i class="icon-signout"></i>Signout </a></li>
                       <li class="divider-vertical"></li>

@@ -40,10 +40,10 @@ public class SearchCourses extends HttpServlet {
 		HttpSession session = request.getSession();
 		String department="", courseNumber=""; 
 		if(request.getParameter("department")!=null || "".equals(request.getParameter("department"))){
-			
+			department = request.getParameter("department");
 		}
 		if(request.getParameter("courseNumber")!=null || "".equals(request.getParameter("department"))){
-			
+			courseNumber = request.getParameter("courseNumber");
 		}
 		UniversityServerServiceProxy proxy = new UniversityServerServiceProxy();
 		Course[] coursesReply = proxy.searchAllCourses(department, courseNumber);

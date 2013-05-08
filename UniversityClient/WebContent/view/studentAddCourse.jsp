@@ -53,7 +53,8 @@
 						<input type="button" class="btn btn-success" value="Search"
 							onclick="return doSearchCourses()">
 						<%
-							Course[] course = (Course[]) session.getAttribute("courseReply");
+						if(session.getAttribute("courseReply")!=null){	
+						Course[] course = (Course[]) session.getAttribute("courseReply");
 						%>
 					<table>
 						<tr>
@@ -66,8 +67,22 @@
 							<td>Time</td>
 							<td>Department</td>													
 						</tr>
-						
+						<%
+						for(int iCount=0; iCount<course.length; iCount++){%>
+						<tr>
+							<td><%=course[iCount].getCourseNumber() %></td>
+							<td><%=course[iCount].getCourseName() %></td>
+							<td><%=course[iCount].getSection() %></td>
+							<td><%=course[iCount].getCredits() %></td>
+							<td><%=course[iCount].getDay() %></td>
+							<td><%=course[iCount].getLocation() %></td>
+							<td><%=course[iCount].getDepartment() %></td>
+						</tr>	
+						<%}	%>
 					</table>
+					<%}else{ %>
+					No Courses Found!
+					<%} %>
 					</form>
 				</div>
 			</div>

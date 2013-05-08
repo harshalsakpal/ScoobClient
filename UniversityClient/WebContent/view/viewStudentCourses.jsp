@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <%@ include file="student_homepage.jsp" %>
+    <%@ include file="StudentHome.jsp" %>
 </head>
 <body>
  <div class="container">
@@ -51,7 +51,7 @@
                              <p>Day:<%=i.getCourseDay() %></p>
                                <p>Time:<%=i.getCourseTime()%> </p>
                                <p>Section:<%=i.getCourseSection() %></p>
-                              
+                            	  <a input type="submit" class="btn btn-danger" value="Drop Class" href="drop_student.jsp" >Drop CLass</a>
                            
 							  </div>  
                           </div>

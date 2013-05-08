@@ -144,4 +144,24 @@
     <servlet-name>SearchCourses</servlet-name>
     <url-pattern>/SearchCourses</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateProfData</display-name>
+    <servlet-name>UpdateProfData</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.UpdateProfData</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateProfData</servlet-name>
+    <url-pattern>/UpdateProfData</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateStudData</display-name>
+    <servlet-name>UpdateStudData</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.UpdateStudData</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateStudData</servlet-name>
+    <url-pattern>/UpdateStudData</url-pattern>
+  </servlet-mapping>
 </web-app>

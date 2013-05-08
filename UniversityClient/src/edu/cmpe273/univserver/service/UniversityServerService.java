@@ -31,7 +31,7 @@ public interface UniversityServerService extends java.rmi.Remote {
     public edu.cmpe273.univserver.beans.Person signIn(java.lang.String username, java.lang.String password) throws java.rmi.RemoteException;
     public boolean adminSignIn(java.lang.String username, java.lang.String password) throws java.rmi.RemoteException;
     public java.lang.String addCourse(edu.cmpe273.univserver.beans.StudentCourse studentCourse) throws java.rmi.RemoteException;
-    public java.lang.String dropCourse(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException;
+    public java.lang.String dropCourse(java.lang.String sjsu_id, java.lang.String name) throws java.rmi.RemoteException;
     public java.lang.String registerUser(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException;
     public edu.cmpe273.univserver.beans.Course getCourseDetails(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException;
     public java.lang.String editCourseAssignedToAProfessor() throws java.rmi.RemoteException;

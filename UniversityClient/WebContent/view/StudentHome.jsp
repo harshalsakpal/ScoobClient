@@ -36,7 +36,7 @@
                       <li class="divider-vertical"></li>
                       <li><a href="StudentHome.jsp"><i class="icon-home"></i> Home </a></li>
                       <li class="divider-vertical"></li>
-                      <li><a href="#"><i class="icon-user"></i>Profile </a></li>
+                      <li><a href="View_Student_Profile.jsp"><i class="icon-user"></i>Profile </a></li>
                       <li class="divider-vertical"></li>
                       <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-book"></i>Courses 
                         <b class="caret"></b>
@@ -45,7 +45,6 @@
                             <li><a href="viewStudentCourses.jsp"><i class="icon-folder-open-alt"></i>view enrolled courses</a></li>
                             <li><a href="studentAddCourse.jsp"><i class="icon-plus"></i>add course</a></li>
                             <li><a href="viewStudentCourses.jsp"><i class="icon-remove"></i>drop course</a> </li>
-
                               </ul>
                        </li>
                       <li class="divider-vertical"></li>

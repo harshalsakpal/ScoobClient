@@ -33,9 +33,9 @@
                       <div class="nav-collapse collapse">
                     <ul class="nav"> 
                       <li class="divider-vertical"></li>
-                      <li><a href="#"><i class="icon-home"></i> Home </a></li>
+                      <li><a href="InstructorHome.jsp"><i class="icon-home"></i> Home </a></li>
                       <li class="divider-vertical"></li>
-                      <li><a href="#"><i class="icon-user"></i>Profile </a></li>
+                      <li><a href="View_Professor_Profile.jsp"><i class="icon-user"></i>Profile </a></li>
                       <li class="divider-vertical"></li>
                       <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-book"></i>Courses 
                         <b class="caret"></b>

@@ -288,7 +288,9 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("dropCourse");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "studentCourse"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "StudentCourse"), edu.cmpe273.univserver.beans.StudentCourse[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "sjsu_id"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+        oper.addParameter(param);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "name"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         oper.setReturnClass(java.lang.String.class);
@@ -1235,7 +1237,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
-    public java.lang.String dropCourse(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException {
+    public java.lang.String dropCourse(java.lang.String sjsu_id, java.lang.String name) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1251,7 +1253,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {studentCourse});
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {sjsu_id, name});
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
