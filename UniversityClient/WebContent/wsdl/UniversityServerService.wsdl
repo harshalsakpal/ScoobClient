@@ -32,8 +32,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    <element name="assignCourseToAProfessor">
     <complexType>
      <sequence>
-      <element name="c" type="tns1:Course"/>
-      <element name="p" type="tns1:Person"/>
+      <element name="ic" type="tns1:InstructorCourse"/>
      </sequence>
     </complexType>
    </element>
@@ -55,7 +54,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    <element name="searchAllCoursesResponse">
     <complexType>
      <sequence>
-      <element name="searchAllCoursesReturn" type="tns1:Course"/>
+      <element maxOccurs="unbounded" name="searchAllCoursesReturn" type="tns1:Course"/>
      </sequence>
     </complexType>
    </element>
@@ -304,7 +303,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    <element name="addCourse">
     <complexType>
      <sequence>
-      <element maxOccurs="unbounded" name="studentCourse" type="tns1:StudentCourse"/>
+      <element name="studentCourse" type="tns1:StudentCourse"/>
      </sequence>
     </complexType>
    </element>
@@ -399,25 +398,29 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      <element name="sjsuid" nillable="true" type="xsd:string"/>
     </sequence>
    </complexType>
+   <complexType name="InstructorCourse">
+    <sequence>
+     <element name="availableSeats" nillable="true" type="xsd:string"/>
+     <element name="courseNumber" nillable="true" type="xsd:string"/>
+     <element name="day" nillable="true" type="xsd:string"/>
+     <element name="department" nillable="true" type="xsd:string"/>
+     <element name="filledSeats" nillable="true" type="xsd:string"/>
+     <element name="location" nillable="true" type="xsd:string"/>
+     <element name="section" nillable="true" type="xsd:string"/>
+     <element name="sjsuid" nillable="true" type="xsd:string"/>
+     <element name="time" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
    <complexType name="Course">
     <sequence>
      <element name="courseDesc" nillable="true" type="xsd:string"/>
      <element name="courseName" nillable="true" type="xsd:string"/>
      <element name="courseNumber" nillable="true" type="xsd:string"/>
      <element name="credits" nillable="true" type="xsd:string"/>
-     <element name="department" nillable="true" type="xsd:string"/>
-     <element name="section" nillable="true" type="xsd:string"/>
-    </sequence>
-   </complexType>
-   <complexType name="InstructorCourse">
-    <sequence>
-     <element name="availableSeats" nillable="true" type="xsd:string"/>
-     <element name="courseNumber" nillable="true" type="xsd:string"/>
      <element name="day" nillable="true" type="xsd:string"/>
-     <element name="filledSeats" nillable="true" type="xsd:string"/>
+     <element name="department" nillable="true" type="xsd:string"/>
      <element name="location" nillable="true" type="xsd:string"/>
      <element name="section" nillable="true" type="xsd:string"/>
-     <element name="sjsuid" nillable="true" type="xsd:string"/>
      <element name="time" nillable="true" type="xsd:string"/>
     </sequence>
    </complexType>

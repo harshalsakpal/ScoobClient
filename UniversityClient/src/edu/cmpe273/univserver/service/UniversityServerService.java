@@ -10,8 +10,8 @@ package edu.cmpe273.univserver.service;
 public interface UniversityServerService extends java.rmi.Remote {
     public edu.cmpe273.univserver.beans.Person[] listAllProfessors() throws java.rmi.RemoteException;
     public java.lang.String removeCourseFromCart(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException;
-    public java.lang.String assignCourseToAProfessor(edu.cmpe273.univserver.beans.Course c, edu.cmpe273.univserver.beans.Person p) throws java.rmi.RemoteException;
-    public edu.cmpe273.univserver.beans.Course searchAllCourses(java.lang.String category, java.lang.String input) throws java.rmi.RemoteException;
+    public java.lang.String assignCourseToAProfessor(edu.cmpe273.univserver.beans.InstructorCourse ic) throws java.rmi.RemoteException;
+    public edu.cmpe273.univserver.beans.Course[] searchAllCourses(java.lang.String category, java.lang.String input) throws java.rmi.RemoteException;
     public edu.cmpe273.univserver.beans.Person[] listAllPersons() throws java.rmi.RemoteException;
     public java.lang.String deleteStudentInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException;
     public java.lang.String deleteProfessorInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException;
@@ -30,7 +30,7 @@ public interface UniversityServerService extends java.rmi.Remote {
     public java.lang.String testService() throws java.rmi.RemoteException;
     public edu.cmpe273.univserver.beans.Person signIn(java.lang.String username, java.lang.String password) throws java.rmi.RemoteException;
     public boolean adminSignIn(java.lang.String username, java.lang.String password) throws java.rmi.RemoteException;
-    public java.lang.String addCourse(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException;
+    public java.lang.String addCourse(edu.cmpe273.univserver.beans.StudentCourse studentCourse) throws java.rmi.RemoteException;
     public java.lang.String dropCourse(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException;
     public java.lang.String registerUser(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException;
     public edu.cmpe273.univserver.beans.Course getCourseDetails(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException;

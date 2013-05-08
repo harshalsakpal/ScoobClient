@@ -8,17 +8,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="<%=request.getContextPath() %>/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
   <body>
-    <% if(session.getAttribute("user")==null)
-	  {
-	  	System.out.println("user sesion is null");
-    	response.sendRedirect("Login.jsp");
-	  	return;
-	  }
-	  %>
-	  <% String ctx=request.getContextPath();%>
     <div class="container">
       <header class="row">
           <div class="span12">
@@ -34,7 +26,7 @@
                       <div class="nav-collapse collapse">
                     <ul class="nav"> 
                       <li class="divider-vertical"></li>
-                      <li><a href="StudentHome.jsp"><i class="icon-home"></i> Home </a></li>
+                      <li><a href="#"><i class="icon-home"></i> Home </a></li>
                       <li class="divider-vertical"></li>
                       <li><a href="#"><i class="icon-user"></i>Profile </a></li>
                       <li class="divider-vertical"></li>
@@ -43,15 +35,15 @@
                           </a>
                           <ul class="dropdown-menu">
                             <li><a href="viewStudentCourses.jsp"><i class="icon-folder-open-alt"></i>view enrolled courses</a></li>
-                            <li><a href="studentAddCourse.jsp"><i class="icon-plus"></i>add course</a></li>
-                            <li><a href="viewStudentCourses.jsp"><i class="icon-remove"></i>drop course</a> </li>
+                            <li><a href="#"><i class="icon-plus"></i>add course</a></li>
+                            <li><a href="#"><i class="icon-remove"></i>drop course</a> </li>
 
                               </ul>
                        </li>
                       <li class="divider-vertical"></li>
                       <li><a href="#"><i class="icon-shopping-cart"></i>MyCart </a></li>
                       <li class="divider-vertical"></li>
-                      <li><a href="Logout.jsp"><i class="icon-signout"></i>Signout </a></li>
+                      <li><a href="#"><i class="icon-signout"></i>Signout </a></li>
                       <li class="divider-vertical"></li>
 
                    </ul>
@@ -69,6 +61,6 @@
    
    
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="<%=request.getContextPath() %>/js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
   </body>
 </html>

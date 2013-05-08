@@ -16,9 +16,15 @@ public class Course  implements java.io.Serializable {
 
     private java.lang.String credits;
 
+    private java.lang.String day;
+
     private java.lang.String department;
 
+    private java.lang.String location;
+
     private java.lang.String section;
+
+    private java.lang.String time;
 
     public Course() {
     }
@@ -28,14 +34,20 @@ public class Course  implements java.io.Serializable {
            java.lang.String courseName,
            java.lang.String courseNumber,
            java.lang.String credits,
+           java.lang.String day,
            java.lang.String department,
-           java.lang.String section) {
+           java.lang.String location,
+           java.lang.String section,
+           java.lang.String time) {
            this.courseDesc = courseDesc;
            this.courseName = courseName;
            this.courseNumber = courseNumber;
            this.credits = credits;
+           this.day = day;
            this.department = department;
+           this.location = location;
            this.section = section;
+           this.time = time;
     }
 
 
@@ -120,6 +132,26 @@ public class Course  implements java.io.Serializable {
 
 
     /**
+     * Gets the day value for this Course.
+     * 
+     * @return day
+     */
+    public java.lang.String getDay() {
+        return day;
+    }
+
+
+    /**
+     * Sets the day value for this Course.
+     * 
+     * @param day
+     */
+    public void setDay(java.lang.String day) {
+        this.day = day;
+    }
+
+
+    /**
      * Gets the department value for this Course.
      * 
      * @return department
@@ -140,6 +172,26 @@ public class Course  implements java.io.Serializable {
 
 
     /**
+     * Gets the location value for this Course.
+     * 
+     * @return location
+     */
+    public java.lang.String getLocation() {
+        return location;
+    }
+
+
+    /**
+     * Sets the location value for this Course.
+     * 
+     * @param location
+     */
+    public void setLocation(java.lang.String location) {
+        this.location = location;
+    }
+
+
+    /**
      * Gets the section value for this Course.
      * 
      * @return section
@@ -156,6 +208,26 @@ public class Course  implements java.io.Serializable {
      */
     public void setSection(java.lang.String section) {
         this.section = section;
+    }
+
+
+    /**
+     * Gets the time value for this Course.
+     * 
+     * @return time
+     */
+    public java.lang.String getTime() {
+        return time;
+    }
+
+
+    /**
+     * Sets the time value for this Course.
+     * 
+     * @param time
+     */
+    public void setTime(java.lang.String time) {
+        this.time = time;
     }
 
     private java.lang.Object __equalsCalc = null;
@@ -182,12 +254,21 @@ public class Course  implements java.io.Serializable {
             ((this.credits==null && other.getCredits()==null) || 
              (this.credits!=null &&
               this.credits.equals(other.getCredits()))) &&
+            ((this.day==null && other.getDay()==null) || 
+             (this.day!=null &&
+              this.day.equals(other.getDay()))) &&
             ((this.department==null && other.getDepartment()==null) || 
              (this.department!=null &&
               this.department.equals(other.getDepartment()))) &&
+            ((this.location==null && other.getLocation()==null) || 
+             (this.location!=null &&
+              this.location.equals(other.getLocation()))) &&
             ((this.section==null && other.getSection()==null) || 
              (this.section!=null &&
-              this.section.equals(other.getSection())));
+              this.section.equals(other.getSection()))) &&
+            ((this.time==null && other.getTime()==null) || 
+             (this.time!=null &&
+              this.time.equals(other.getTime())));
         __equalsCalc = null;
         return _equals;
     }
@@ -211,11 +292,20 @@ public class Course  implements java.io.Serializable {
         if (getCredits() != null) {
             _hashCode += getCredits().hashCode();
         }
+        if (getDay() != null) {
+            _hashCode += getDay().hashCode();
+        }
         if (getDepartment() != null) {
             _hashCode += getDepartment().hashCode();
         }
+        if (getLocation() != null) {
+            _hashCode += getLocation().hashCode();
+        }
         if (getSection() != null) {
             _hashCode += getSection().hashCode();
+        }
+        if (getTime() != null) {
+            _hashCode += getTime().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -252,14 +342,32 @@ public class Course  implements java.io.Serializable {
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("day");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "day"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("department");
         elemField.setXmlName(new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "department"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("location");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "location"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("section");
         elemField.setXmlName(new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "section"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("time");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "time"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);

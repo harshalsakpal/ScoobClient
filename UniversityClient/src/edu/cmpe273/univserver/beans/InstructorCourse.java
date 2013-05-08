@@ -14,6 +14,8 @@ public class InstructorCourse  implements java.io.Serializable {
 
     private java.lang.String day;
 
+    private java.lang.String department;
+
     private java.lang.String filledSeats;
 
     private java.lang.String location;
@@ -31,6 +33,7 @@ public class InstructorCourse  implements java.io.Serializable {
            java.lang.String availableSeats,
            java.lang.String courseNumber,
            java.lang.String day,
+           java.lang.String department,
            java.lang.String filledSeats,
            java.lang.String location,
            java.lang.String section,
@@ -39,6 +42,7 @@ public class InstructorCourse  implements java.io.Serializable {
            this.availableSeats = availableSeats;
            this.courseNumber = courseNumber;
            this.day = day;
+           this.department = department;
            this.filledSeats = filledSeats;
            this.location = location;
            this.section = section;
@@ -104,6 +108,26 @@ public class InstructorCourse  implements java.io.Serializable {
      */
     public void setDay(java.lang.String day) {
         this.day = day;
+    }
+
+
+    /**
+     * Gets the department value for this InstructorCourse.
+     * 
+     * @return department
+     */
+    public java.lang.String getDepartment() {
+        return department;
+    }
+
+
+    /**
+     * Sets the department value for this InstructorCourse.
+     * 
+     * @param department
+     */
+    public void setDepartment(java.lang.String department) {
+        this.department = department;
     }
 
 
@@ -227,6 +251,9 @@ public class InstructorCourse  implements java.io.Serializable {
             ((this.day==null && other.getDay()==null) || 
              (this.day!=null &&
               this.day.equals(other.getDay()))) &&
+            ((this.department==null && other.getDepartment()==null) || 
+             (this.department!=null &&
+              this.department.equals(other.getDepartment()))) &&
             ((this.filledSeats==null && other.getFilledSeats()==null) || 
              (this.filledSeats!=null &&
               this.filledSeats.equals(other.getFilledSeats()))) &&
@@ -261,6 +288,9 @@ public class InstructorCourse  implements java.io.Serializable {
         }
         if (getDay() != null) {
             _hashCode += getDay().hashCode();
+        }
+        if (getDepartment() != null) {
+            _hashCode += getDepartment().hashCode();
         }
         if (getFilledSeats() != null) {
             _hashCode += getFilledSeats().hashCode();
@@ -302,6 +332,12 @@ public class InstructorCourse  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("day");
         elemField.setXmlName(new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "day"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("department");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "department"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);

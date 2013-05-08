@@ -47,9 +47,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("assignCourseToAProfessor");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "c"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "Course"), edu.cmpe273.univserver.beans.Course.class, false, false);
-        oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "p"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "Person"), edu.cmpe273.univserver.beans.Person.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "ic"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "InstructorCourse"), edu.cmpe273.univserver.beans.InstructorCourse.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         oper.setReturnClass(java.lang.String.class);
@@ -65,7 +63,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "input"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "Course"));
-        oper.setReturnClass(edu.cmpe273.univserver.beans.Course.class);
+        oper.setReturnClass(edu.cmpe273.univserver.beans.Course[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "searchAllCoursesReturn"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
@@ -279,7 +277,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("addCourse");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "studentCourse"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "StudentCourse"), edu.cmpe273.univserver.beans.StudentCourse[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "studentCourse"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://beans.univserver.cmpe273.edu", "StudentCourse"), edu.cmpe273.univserver.beans.StudentCourse.class, false, false);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         oper.setReturnClass(java.lang.String.class);
@@ -523,7 +521,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
-    public java.lang.String assignCourseToAProfessor(edu.cmpe273.univserver.beans.Course c, edu.cmpe273.univserver.beans.Person p) throws java.rmi.RemoteException {
+    public java.lang.String assignCourseToAProfessor(edu.cmpe273.univserver.beans.InstructorCourse ic) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -539,7 +537,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {c, p});
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {ic});
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -557,7 +555,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
-    public edu.cmpe273.univserver.beans.Course searchAllCourses(java.lang.String category, java.lang.String input) throws java.rmi.RemoteException {
+    public edu.cmpe273.univserver.beans.Course[] searchAllCourses(java.lang.String category, java.lang.String input) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -581,9 +579,9 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         else {
             extractAttachments(_call);
             try {
-                return (edu.cmpe273.univserver.beans.Course) _resp;
+                return (edu.cmpe273.univserver.beans.Course[]) _resp;
             } catch (java.lang.Exception _exception) {
-                return (edu.cmpe273.univserver.beans.Course) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Course.class);
+                return (edu.cmpe273.univserver.beans.Course[]) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Course[].class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -1203,7 +1201,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
-    public java.lang.String addCourse(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException {
+    public java.lang.String addCourse(edu.cmpe273.univserver.beans.StudentCourse studentCourse) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
