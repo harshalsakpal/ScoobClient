@@ -9,7 +9,7 @@
 <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
 
 </head>
-<body padding-top: 100px; >
+<bodypadding-top: 100px; >
 	<div class="container">
 		<header class="row">
 			<div class="span12">
@@ -125,17 +125,20 @@
 							
 								<div>
 				
-								<button class="btn btn-danger" data-dismiss="modal"	aria-hidden="true">cancel</button>
+								<input type="button" class="btn btn-danger" value="Cancel" onclick="goToLoginPage()">
 				
 								<input type="button" class="btn btn-success" value="Register" onclick="return doContinue()">
 								
 								<input type="reset" class="btn btn-info" value="Reset">
 				
 				<%
-					if(session.getAttribute("registerReply")!=null){%> 
-						<%=session.getAttribute("registerReply") %>	
+									if (session.getAttribute("registerReply") != null) {
+								%> 
+						<%=session.getAttribute("registerReply")%>	
 					
-					<%}	%>
+					<%
+												}
+											%>
 				</div>
 			</form>
 			</div>
@@ -148,12 +151,17 @@
 	<script type="text/javascript">
 		$(function() {
 			$('#dp3').datepicker();
-			 $('.selectpicker').selectpicker();
+			$('.selectpicker').selectpicker();
 		});
 	</script>
 
 
 	<script type="text/javascript">
+		function goToLoginPage() {
+			document.forms[0].action = '../view/Login.jsp';
+			document.forms[0].submit();
+		}
+
 		function validateForm(formId, erPlacement, validRules) {
 			erPlacement = erPlacement || 'bottom';
 			validRules = validRules || {};
@@ -183,16 +191,12 @@
 				},
 				submitHandler : function() {
 				},
-				
 
 				onsubmit : true
 
 			});
-			
-			
+
 		}//end of validate
-		
-		
 	</script>
 <script type="text/javascript">
 	function removeError() {
@@ -202,43 +206,41 @@
 		if (document.forms[0].zipcode.value != null
 				|| document.forms[0].zipcode.value != "")
 			document.getElementById("ziperror").innerHTML = "";
-		
+
 	}
-	function doContinue(){
+	function doContinue() {
 		var email = $("#email").val();
-		var zipcode=$("#zipcode").val();
+		var zipcode = $("#zipcode").val();
 		var password = $("#password").val();
 		var repassword = $("#repassword").val();
-		if(password != repassword){
-	    	document.getElementById("passworderror").innerHTML = "Password doesnot match";
-	    	return false;
-		}
-		
-		if(!validateEmailid(email)){
-	    	document.getElementById("emailerror").innerHTML = "Email id is not valid";
-	    	return false;
-			}
-		if(!validateZip(zipcode)){
-			document.getElementById("ziperror").innerHTML="Zip not valid";
+		if (password != repassword) {
+			document.getElementById("passworderror").innerHTML = "Password doesnot match";
 			return false;
-			}
-	    document.forms[0].action = '../RegisterServlet';
-	    document.forms[0].submit();
+		}
+
+		if (!validateEmailid(email)) {
+			document.getElementById("emailerror").innerHTML = "Email id is not valid";
+			return false;
+		}
+		if (!validateZip(zipcode)) {
+			document.getElementById("ziperror").innerHTML = "Zip not valid";
+			return false;
+		}
+		document.forms[0].action = '../RegisterServlet';
+		document.forms[0].submit();
 	}
 
-	function validateEmailid(emailid){
+	function validateEmailid(emailid) {
 		var pattern = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
-		  alert(emailid.match(pattern)); 
-		  return emailid.match(pattern);
+		alert(emailid.match(pattern));
+		return emailid.match(pattern);
 	}
 
-	function validateZip(zipNumber){
+	function validateZip(zipNumber) {
 		var pattern = /^\d{5}$/;
-		  alert(zipNumber.match(pattern)); 
-		  return zipNumber.match(pattern);		
+		alert(zipNumber.match(pattern));
+		return zipNumber.match(pattern);
 	}
-
-
 </script>
 
 
