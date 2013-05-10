@@ -226,6 +226,19 @@
 	    document.forms[0].submit();
 	}
 
+	function validateEmailid(emailid){
+		var pattern = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
+		  alert(emailid.match(pattern)); 
+		  return emailid.match(pattern);
+	}
+
+	function validateZip(zipNumber){
+		var pattern = /^\d{5}$/;
+		  alert(zipNumber.match(pattern)); 
+		  return zipNumber.match(pattern);		
+	}
+
+
 </script>
 
 

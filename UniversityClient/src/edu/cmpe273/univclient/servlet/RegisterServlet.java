@@ -37,50 +37,50 @@ public class RegisterServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("In register Servlet");
-		Person person = new Person(); 
 		HttpSession session = request.getSession();
+		session.setAttribute("registerReply", "");
+		Person person = new Person(); 
+		
 		//String firstname="", lastname="", gender="", dateofbirth="", address1="", address2="", email="", password="", city="", zipcode="", role="", department="";
 		
 		if(request.getParameter("firstname")!=null || !"".equals(request.getParameter("firstname"))){
-			person.setFirstName(request.getParameter("firstname"));
+			person.setFirstName(request.getParameter("firstname").trim());
 		}
 		if(request.getParameter("lastname")!=null || !"".equals(request.getParameter("lastname"))){
-			person.setLastName(request.getParameter("lastname"));
+			person.setLastName(request.getParameter("lastname").trim());
 		}	
 		if(request.getParameter("gender")!=null || !"".equals(request.getParameter("gender"))){
-			person.setGender(request.getParameter("gender"));
+			person.setGender(request.getParameter("gender").trim());
 		}	
 		if(request.getParameter("dateofbirth")!=null || !"".equals(request.getParameter("dateofbirth"))){
-			person.setDateOfBirth(request.getParameter("dateofbirth"));
+			person.setDateOfBirth(request.getParameter("dateofbirth").trim());
 		}	
 		if(request.getParameter("address1")!=null || !"".equals(request.getParameter("address1"))){
-			person.setAddrLine1(request.getParameter("address1"));
+			person.setAddrLine1(request.getParameter("address1").trim());
 		}	
 		if(request.getParameter("address2")!=null || !"".equals(request.getParameter("address2"))){
-			person.setAddrLine2(request.getParameter("address2"));
+			person.setAddrLine2(request.getParameter("address2").trim());
 		}	
 		if(request.getParameter("email")!=null || !"".equals(request.getParameter("email"))){
-			person.setEmailid(request.getParameter("email"));
+			person.setEmailid(request.getParameter("email").trim());
 		}	
 		if(request.getParameter("password")!=null || !"".equals(request.getParameter("password"))){
-			person.setPassword(request.getParameter("password"));
+			person.setPassword(request.getParameter("password").trim());
 		}	
 		if(request.getParameter("city")!=null || !"".equals(request.getParameter("city"))){
-			person.setCityName(request.getParameter("city"));
+			person.setCityName(request.getParameter("city").trim());
 		}
 		if(request.getParameter("state")!=null || !"".equals(request.getParameter("state"))){
-			System.out.println("StateName in servlet");
-			person.setStateName(request.getParameter("state"));
+			person.setStateName(request.getParameter("state").trim());
 		}
 		if(request.getParameter("zipcode")!=null || !"".equals(request.getParameter("zipcode"))){
-			person.setZipCode(request.getParameter("zipcode"));
+			person.setZipCode(request.getParameter("zipcode").trim());
 		}
 		if(request.getParameter("role")!=null || !"".equals(request.getParameter("role"))){
-			person.setRole(request.getParameter("role"));
+			person.setRole(request.getParameter("role").trim());
 		}
 		if(request.getParameter("department")!=null || !"".equals(request.getParameter("department"))){
-			person.setDepartment(request.getParameter("department"));
+			person.setDepartment(request.getParameter("department").trim());
 		}
 		
 		UniversityServerServiceProxy proxy = new UniversityServerServiceProxy();
