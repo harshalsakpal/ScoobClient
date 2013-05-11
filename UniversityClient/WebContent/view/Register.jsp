@@ -9,7 +9,7 @@
 <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
 
 </head>
-<bodypadding-top: 100px; >
+<body padding-top: 100px; >
 	<div class="container">
 		<header class="row">
 			<div class="span12">
