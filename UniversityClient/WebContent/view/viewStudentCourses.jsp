@@ -31,7 +31,7 @@
     	%>
     
     </div>
-       </div>  
+         
        	<%if(course!=null){%>
          	
          	
@@ -59,7 +59,7 @@
 						
 						<%}	%>
 						<tr>
-						<td><div class="controls controls-row info"><input type="submit" name="DropCourse" value="Drop Courses" "> </div></td>
+						<td><div class="controls controls-row info"><input type="submit" name="DropCourse" value="Drop Courses"> </div></td>
 						</tr>
 					
 					</table>
@@ -70,7 +70,7 @@
                   </div>
                  
               <%} %>
-                 
+            </div>     
    </form>
 		
 </body>

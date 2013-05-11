@@ -66,7 +66,7 @@ public class DropCourseToStudent extends HttpServlet {
 														}
 			}
 		}
-		session.setAttribute("coursedroped", coursedropped);
+		session.setAttribute("coursedropped", coursedropped);
 		response.sendRedirect("StudentHome.jsp");
 			
 
