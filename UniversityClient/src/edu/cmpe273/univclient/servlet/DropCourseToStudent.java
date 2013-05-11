@@ -30,7 +30,7 @@ public class DropCourseToStudent extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		System.out.println("in AddCourseToStudent");
+		System.out.println("in DropCourseToStudent");
 		
 		String sjsuid = (String)session.getAttribute("user");
 		String[] selctedCourseList = request.getParameterValues("checkedCourses");
