@@ -45,7 +45,6 @@ public class AdminAddCourse extends HttpServlet {
 		
 		String status = proxy.adminAddCourse(c);
 		hs.setAttribute("Status", status);
-		System.out.println();
 		response.sendRedirect("view/AdminAddClass.jsp");
 		}
 	}

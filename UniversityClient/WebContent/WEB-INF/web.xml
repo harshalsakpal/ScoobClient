@@ -184,4 +184,34 @@
     <servlet-name>DropCourseToStudent</servlet-name>
     <url-pattern>/view/DropCourseToStudent</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GetAllStudents</display-name>
+    <servlet-name>GetAllStudents</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.GetAllStudents</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetAllStudents</servlet-name>
+    <url-pattern>/GetAllStudents</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GetAllProfessors</display-name>
+    <servlet-name>GetAllProfessors</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.GetAllProfessors</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetAllProfessors</servlet-name>
+    <url-pattern>/GetAllProfessors</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GetAllPersons</display-name>
+    <servlet-name>GetAllPersons</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.GetAllPersons</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetAllPersons</servlet-name>
+    <url-pattern>/GetAllPersons</url-pattern>
+  </servlet-mapping>
 </web-app>
