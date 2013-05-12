@@ -55,6 +55,9 @@
                             <li><a href="UpdateProferssorDetails.jsp">Edit User Information</a></li>
                             <li><a href="DeleteProfessorDetails.jsp">Delete Instructor</a></li>
                             <li><a href="DeleteStudentDetails.jsp">Delete Student</a></li>
+                            <li><a href="ListAllStudents.jsp">List All Students</a></li>
+                            <li><a href="ListAllProfessors.jsp">List All Professors</a></li>
+                            <li><a href="ListAllPersons.jsp">List All Persons</a></li>
                           </ul>
                           </li>
                           <li class="divider-vertical"></li>
