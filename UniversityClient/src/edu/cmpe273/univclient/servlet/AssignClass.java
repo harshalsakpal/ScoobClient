@@ -1,13 +1,13 @@
 package edu.cmpe273.univclient.servlet;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import edu.cmpe273.univserver.beans.Course;
 import edu.cmpe273.univserver.beans.InstructorCourse;
 import edu.cmpe273.univserver.service.UniversityServerServiceProxy;
 
@@ -41,14 +41,14 @@ public class AssignClass extends HttpServlet {
 		  String fhrs=request.getParameter("fhrs");
 		  String fmins=request.getParameter("fmins");
 		  String fampm=request.getParameter("fampm");
-		  String ftime=fhrs+":"+fmins+" "+fampm;
+		  String ftime=fhrs+":"+fmins+""+fampm;
 		  
 		  String thrs=request.getParameter("thrs");
 		  String tmins=request.getParameter("tmins");
 		  String tampm=request.getParameter("tampm");
 		  String ttime=thrs+":"+tmins+" "+tampm;
 		  
-		  		String time =ftime+" to "+ttime;
+		  		String time =ftime+"to"+ttime;
 		  
 		  		InstructorCourse ic = new InstructorCourse();
 		  		
@@ -60,9 +60,6 @@ public class AssignClass extends HttpServlet {
 		  		ic.setSjsuid(sjsuid);
 		  		ic.setLocation(location);
 		  		ic.setTime(time);
-		  		
-		  		
-		  		
 		  
 		  
 		UniversityServerServiceProxy proxy = new UniversityServerServiceProxy();
