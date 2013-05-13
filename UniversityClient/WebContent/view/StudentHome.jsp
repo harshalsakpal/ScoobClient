@@ -50,8 +50,6 @@
                               </ul>
                        </li>
                       <li class="divider-vertical"></li>
-                      <li><a href="#"><i class="icon-shopping-cart"></i>MyCart </a></li>
-                      <li class="divider-vertical"></li>
                       <li><a href="Logout.jsp"><i class="icon-signout"></i>Signout </a></li>
                       <li class="divider-vertical"></li>
 				

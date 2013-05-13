@@ -118,13 +118,9 @@
 	
 	var selctedCourseList = new Array() ;
 	// Loop through all the items
-	alert ("entered the selectedcOurseloist");
-	alert (document.forms[0].checkedCourses.length);
 	for ( var iLoop = 0; iLoop < document.forms[0].checkedCourses.length; iLoop++) {
-		alert ("for loop");
 		if (document.forms[0].checkedCourses[iLoop].checked == true) {
 			// Item is found. Set its selected property, and exit the loop
-			alert (document.forms[0].checkedCourses[iLoop].value);
 			selctedCourseList = document.forms[0].checkedCourses[iLoop].value;
 			
 	}
