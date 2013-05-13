@@ -25,7 +25,7 @@ public class TrialClass {
 			course.setCourseName("EST COURSE NAME "+Integer.valueOf(iCount));
 			course.setCourseNumber("1000"+Integer.valueOf(iCount));
 			course.setCredits("3");
-			if (iCount >= 10000 && iCount < 20000)
+			if (iCount >= 0 && iCount < 20000)
 				course.setDay("MONDAY");
 			else if(iCount >= 20000 && iCount < 30000)
 				course.setDay("TUESDAY");
@@ -38,7 +38,7 @@ public class TrialClass {
 			else if(iCount >= 50000 && iCount < 100000)
 				course.setDay("TUESDAY");
 
-			if (iCount >= 10000 && iCount < 20000)
+			if (iCount >= 0 && iCount < 20000)
 				course.setDepartment("CMPE");
 			else if(iCount >= 20000 && iCount < 30000)
 				course.setDepartment("CS");

@@ -184,19 +184,16 @@
     <servlet-name>DropCourseToStudent</servlet-name>
     <url-pattern>/view/DropCourseToStudent</url-pattern>
   </servlet-mapping>
-
   <servlet>
     <description></description>
     <display-name>EditAssignClass</display-name>
     <servlet-name>EditAssignClass</servlet-name>
     <servlet-class>edu.cmpe273.univclient.servlet.EditAssignClass</servlet-class>
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>EditAssignClass</servlet-name>
     <url-pattern>/EditAssignClass</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>UpdateAssignClass</display-name>
@@ -206,8 +203,8 @@
   <servlet-mapping>
     <servlet-name>UpdateAssignClass</servlet-name>
     <url-pattern>/UpdateAssignClass</url-pattern>
-</servlet-mapping>
- <servlet>
+  </servlet-mapping>
+  <servlet>
     <description></description>
     <display-name>GetAllStudents</display-name>
     <servlet-name>GetAllStudents</servlet-name>
@@ -237,5 +234,14 @@
     <servlet-name>GetAllPersons</servlet-name>
     <url-pattern>/GetAllPersons</url-pattern>
   </servlet-mapping>
-
+  <servlet>
+    <description></description>
+    <display-name>GetAllCourses</display-name>
+    <servlet-name>GetAllCourses</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.GetAllCourses</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetAllCourses</servlet-name>
+    <url-pattern>/GetAllCourses</url-pattern>
+  </servlet-mapping>
 </web-app>
