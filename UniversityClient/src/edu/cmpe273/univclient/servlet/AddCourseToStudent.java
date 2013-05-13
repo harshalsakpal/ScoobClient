@@ -75,23 +75,6 @@ public class AddCourseToStudent extends HttpServlet {
 		}
 		session.setAttribute("coursesadded", courseadded);
 		response.sendRedirect("view/StudentHome.jsp");
-			
-
-			
-			
-			
-
-			
-			
-		
-			
-			
-			
-		
-			
-			
-
-		
 
 	}
 

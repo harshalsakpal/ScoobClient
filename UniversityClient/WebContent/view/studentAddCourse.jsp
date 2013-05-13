@@ -113,7 +113,6 @@
 	}
 
 	function addCourses(){
-
 	if(document.forms[0].checkedCourses.length==0)
 		return false;
 	

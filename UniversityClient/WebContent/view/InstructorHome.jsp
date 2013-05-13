@@ -65,7 +65,7 @@
   
    
    
-    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="<%=request.getContextPath() %>/js/jquery-1.9.1.js"></script>
     <script src="<%=request.getContextPath() %>/js/bootstrap.min.js"></script>
   </body>
 </html>
