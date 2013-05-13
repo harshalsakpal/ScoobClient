@@ -184,4 +184,24 @@
     <servlet-name>DropCourseToStudent</servlet-name>
     <url-pattern>/view/DropCourseToStudent</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EditAssignClass</display-name>
+    <servlet-name>EditAssignClass</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.EditAssignClass</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditAssignClass</servlet-name>
+    <url-pattern>/EditAssignClass</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateAssignClass</display-name>
+    <servlet-name>UpdateAssignClass</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.UpdateAssignClass</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateAssignClass</servlet-name>
+    <url-pattern>/UpdateAssignClass</url-pattern>
+  </servlet-mapping>
 </web-app>

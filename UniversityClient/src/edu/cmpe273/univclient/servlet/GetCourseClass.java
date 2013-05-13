@@ -55,8 +55,13 @@ public class GetCourseClass extends HttpServlet {
 		if(newcourse!=null)
 		{
 			hs.setAttribute("course", newcourse);	
-			System.out.println(newcourse.getCourseName()+ newcourse.getCourseNumber()+ newcourse.getDepartment());
-			System.out.println(newcourse.getSection()+ newcourse.getCredits()+ newcourse.getCourseDesc());
+			System.out.println("Course name:"+newcourse.getCourseName());
+			System.out.println("Course desc:"+newcourse.getCourseDesc());
+			System.out.println("Course number:"+newcourse.getCourseNumber());
+			System.out.println("Course section:"+newcourse.getSection());
+			System.out.println("Course department:"+newcourse.getDepartment());
+			System.out.println("Course credits:"+newcourse.getCredits());
+			
 			response.sendRedirect("view/AdminUpdateClass.jsp");
 		}
 		else

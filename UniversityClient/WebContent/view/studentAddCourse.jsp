@@ -55,6 +55,7 @@
 						<%System.out.println(session.getAttribute("coursesReply"));
 						if(session.getAttribute("coursesReply")!=null){	
 						Course[] course = (Course[]) session.getAttribute("coursesReply");
+						
 						%>
 					<table align="center" border="1">
 						<tr align="left">
@@ -80,9 +81,10 @@
 							<td><input type="checkbox" name="checkedCourses" value=<%=course[iCount].getCourseNumber()+","+course[iCount].getCourseName()+","+course[iCount].getSection()+","+course[iCount].getDay()+","+course[iCount].getTime()+","+course[iCount].getLocation()%> > </td>
 						</tr>	
 						
-						<%}	%>
+						<% System.out.println(course[iCount].getCourseNumber()+","+course[iCount].getCourseName()+","+course[iCount].getSection()+","+course[iCount].getDay()+","+course[iCount].getTime()+","+course[iCount].getLocation());
+						}	%>
 						<tr>
-						<td><div class="controls controls-row info"><input type="button" name="addCourse" value="Add Courses" onclick="addCourses()"> </div></td>
+						<td><div class="controls controls-row info"><input type="button" name="addCourse" value="Add Courses" onclick="addCourses()" > </div></td>
 						</tr>
 					
 					</table>
@@ -117,16 +119,21 @@
 	
 	var selctedCourseList = new Array() ;
 	// Loop through all the items
+	alert ("entered the selectedcOurseloist");
+	alert (document.forms[0].checkedCourses.length);
 	for ( var iLoop = 0; iLoop < document.forms[0].checkedCourses.length; iLoop++) {
+		alert ("for loop");
 		if (document.forms[0].checkedCourses[iLoop].checked == true) {
 			// Item is found. Set its selected property, and exit the loop
+			alert (document.forms[0].checkedCourses[iLoop].value);
 			selctedCourseList = document.forms[0].checkedCourses[iLoop].value;
-		}
+			
 	}
 
 	   document.forms[0].action = '../AddCourseToStudent';
 	   document.forms[0].submit();
 	
+	}
 	}
 	</script>
 

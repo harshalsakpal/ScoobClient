@@ -60,8 +60,15 @@
                             <li><a href="ListAllPersons.jsp">List All Persons</a></li>
                           </ul>
                           </li>
-                          <li class="divider-vertical"></li>
-                      <li><a href="AssignCourse.jsp">Assign </a></li>
+                          
+                          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Assign
+                      <b class="caret"></b> 
+                    </a>
+                      <ul class="dropdown-menu">
+                            <li><a href="AssignCourse.jsp">Assign Course</a></li>
+                            <li><a href="EditAssignCourse.jsp">Edit Assigned Course</a></li>
+                          </ul>
+                          </li>
                       <li class="divider-vertical"></li>
                       <li><a href="AdminLogout.jsp"><i class="icon-signout"></i>Signout </a></li>
                       <li class="divider-vertical"></li>
