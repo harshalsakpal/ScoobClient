@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/edu/cmpe273/univserver/beans/Course.java=UTF-8
+encoding//src/edu/cmpe273/univserver/beans/InstructorCourse.java=UTF-8
+encoding//src/edu/cmpe273/univserver/beans/Person.java=UTF-8
+encoding//src/edu/cmpe273/univserver/beans/StudentCourse.java=UTF-8
+encoding//src/edu/cmpe273/univserver/service/UniversityServerService.java=UTF-8
+encoding//src/edu/cmpe273/univserver/service/UniversityServerServiceService.java=UTF-8
+encoding//src/edu/cmpe273/univserver/service/UniversityServerServiceServiceLocator.java=UTF-8
+encoding//src/edu/cmpe273/univserver/service/UniversityServerServiceSoapBindingStub.java=UTF-8
