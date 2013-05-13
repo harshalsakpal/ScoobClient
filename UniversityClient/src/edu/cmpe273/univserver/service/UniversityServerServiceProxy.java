@@ -218,5 +218,17 @@ public class UniversityServerServiceProxy implements edu.cmpe273.univserver.serv
     return universityServerService.editCourseAssignedToAProfessor(ic);
   }
   
+  public edu.cmpe273.univserver.beans.Person[] getAllStudentsUnderACourse(edu.cmpe273.univserver.beans.Course c) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.getAllStudentsUnderACourse(c);
+  }
+  
+  public edu.cmpe273.univserver.beans.Course[] getAllCourses() throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.getAllCourses();
+  }
+  
   
 }
