@@ -221,30 +221,21 @@
 			var myDropdownList2 = document.forms[0].department;
 			var myDropdownList3 = document.forms[0].gender;
 
-			// Loop through all the items
 			for ( var iLoop = 0; iLoop < myDropdownList1.options.length; iLoop++) {
 				if (myDropdownList1.options[iLoop].value == state) {
-					// Item is found. Set its selected property, and exit the loop
 					myDropdownList1.options[iLoop].selected = true;
-					break;
 				}
 			}
 
-			// Loop through all the items
-			for ( var iLoop = 0; iLoop < myDropdownList2.options.length; iLoop++) {
-				if (myDropdownList2.options[iLoop].value == department) {
-					// Item is found. Set its selected property, and exit the loop
-					myDropdownList2.options[iLoop].selected = true;
-					break;
+			for ( var iLoop1 = 0; iLoop1 < myDropdownList2.options.length; iLoop1++) {
+				if (myDropdownList2.options[iLoop1].value == department) {
+					myDropdownList2.options[iLoop1].selected = true;
 				}
 			}
 
-			// Loop through all the items
-			for ( var iLoop = 0; iLoop < myDropdownList3.options.length; iLoop++) {
-				if (myDropdownList3.options[iLoop].value == gender) {
-					// Item is found. Set its selected property, and exit the loop
-					myDropdownList3.options[iLoop].selected = true;
-					break;
+			for ( var iLoop2 = 0; iLoop2 < myDropdownList3.options.length; iLoop2++) {
+				if (myDropdownList3.options[iLoop2].value == gender) {
+					myDropdownList3.options[iLoop2].selected = true;
 				}
 			}
 

@@ -17,14 +17,16 @@
 <%@ include file="Proxy.jsp"%>
 </head>
 <%
-	String state = "", department = "";
+	String state = "", department = "", gender = "";
 	if (session.getAttribute("instructorDetails") != null) {
 		Person person = (Person) session
 				.getAttribute("instructorDetails");
 		state = person.getStateName();
 		department = person.getDepartment();
+		gender = person.getGender();
 %>
-<body onLoad="preselectMyItem('<%=state%>', '<%=department%>')">
+<body
+	onLoad="preselectMyItem('<%=state%>', '<%=department%>', '<%=gender%>'))">
 	<%
 		} else {
 	%>
@@ -38,17 +40,16 @@
 			return;
 		}
 	%>
-<form method="post" name="updateProfessorData">
-<input type="hidden" name="hiddensjsuid" value=""> 
-	<div class="container control-group">
-		<header class="row">
-			<div class="span12">
-				<div class="well">
-					
+	<form method="post" name="updateProfessorData">
+		<input type="hidden" name="hiddensjsuid" value="">
+		<div class="container control-group">
+			<header class="row">
+				<div class="span12">
+					<div class="well">
+
 						<%
 							if (session.getAttribute("userobj") != null) {
-								Person person = (Person) session
-										.getAttribute("userobj");
+								Person person = (Person) session.getAttribute("userobj");
 						%>
 						<table>
 							<tr>
@@ -199,41 +200,43 @@
 						<%=session.getAttribute("instructorDetailsMessage")%>
 						<%
 							}
-					
-					if(session.getAttribute("updateReply")!=null){%> 
-						<%=session.getAttribute("updateReply") %>	
-					
-					<%}	%>
+
+							if (session.getAttribute("updateReply") != null) {
+						%>
+						<%=session.getAttribute("updateReply")%>
+
+						<%
+							}
+						%>
+					</div>
 				</div>
-			</div>
-		</header>
-	</div>
-</form>	
+			</header>
+		</div>
+	</form>
 	<script src="../js/bootstrap-datepicker.js"></script>
 	<script type="text/javascript">
-		function preselectMyItem(state, department) {
-			// Get a reference to the drop-down
+		function preselectMyItem(state, department, gender) {
 			var myDropdownList1 = document.forms[0].state;
 			var myDropdownList2 = document.forms[0].department;
+			var myDropdownList3 = document.forms[0].gender;
 
-			// Loop through all the items
 			for ( var iLoop = 0; iLoop < myDropdownList1.options.length; iLoop++) {
 				if (myDropdownList1.options[iLoop].value == state) {
-					// Item is found. Set its selected property, and exit the loop
 					myDropdownList1.options[iLoop].selected = true;
-					break;
 				}
 			}
 
-			// Loop through all the items
-			for ( var iLoop = 0; iLoop < myDropdownList2.options.length; iLoop++) {
-				if (myDropdownList2.options[iLoop].value == department) {
-					// Item is found. Set its selected property, and exit the loop
-					myDropdownList2.options[iLoop].selected = true;
-					break;
+			for ( var iLoop1 = 0; iLoop1 < myDropdownList2.options.length; iLoop1++) {
+				if (myDropdownList2.options[iLoop1].value == department) {
+					myDropdownList2.options[iLoop1].selected = true;
 				}
 			}
-
+			
+			for ( var iLoop2 = 0; iLoop2 < myDropdownList3.options.length; iLoop2++) {
+				if (myDropdownList3.options[iLoop2].value == gender) {
+					myDropdownList3.options[iLoop2].selected = true;
+				}
+			}
 		}
 
 		function enableFields() {
