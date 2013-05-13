@@ -44,7 +44,11 @@
                             <li><a href="AdminAddClass.jsp"><i class="icon-folder-plus"></i>Add Course</a></li>
                             <li><a href="AdminEditClass.jsp"><i class="icon-plus"></i>Edit Course</a></li>
                             <li><a href="AdminDeleteClass.jsp"><i class="icon-remove"></i>Delete Course</a> </li>
+
 							<li><a href="ListStudentsForACourse.jsp"><i class="icon-remove"></i>List Student Under a Course</a> </li>
+
+							<li><a href="ViewAllCourses.jsp">View All Courses</a> </li>
+
                               </ul>
                        </li>
                       <li class="divider-vertical"></li>

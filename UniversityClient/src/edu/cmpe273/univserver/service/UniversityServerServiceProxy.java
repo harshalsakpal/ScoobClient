@@ -50,10 +50,58 @@ public class UniversityServerServiceProxy implements edu.cmpe273.univserver.serv
     return universityServerService.testService();
   }
   
-  public java.lang.String editStudentInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException{
+  public java.lang.String editCourseAssignedToAProfessor(edu.cmpe273.univserver.beans.InstructorCourse ic) throws java.rmi.RemoteException{
     if (universityServerService == null)
       _initUniversityServerServiceProxy();
-    return universityServerService.editStudentInformation(person);
+    return universityServerService.editCourseAssignedToAProfessor(ic);
+  }
+  
+  public java.lang.String registerUser(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.registerUser(person);
+  }
+  
+  public java.lang.String dropCourse(java.lang.String sjsu_id, java.lang.String name, java.lang.String section) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.dropCourse(sjsu_id, name, section);
+  }
+  
+  public java.lang.String addCourse(java.lang.String sjsuid, java.lang.String courseNumber, java.lang.String courseName, java.lang.String section, java.lang.String day, java.lang.String time, java.lang.String location) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.addCourse(sjsuid, courseNumber, courseName, section, day, time, location);
+  }
+  
+  public boolean adminSignIn(java.lang.String username, java.lang.String password) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.adminSignIn(username, password);
+  }
+  
+  public edu.cmpe273.univserver.beans.Person signIn(java.lang.String username, java.lang.String password) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.signIn(username, password);
+  }
+  
+  public edu.cmpe273.univserver.beans.InstructorCourse getAssignedCourse(edu.cmpe273.univserver.beans.InstructorCourse ic) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.getAssignedCourse(ic);
+  }
+  
+  public edu.cmpe273.univserver.beans.Course[] getAllCourses() throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.getAllCourses();
+  }
+  
+  public edu.cmpe273.univserver.beans.Person searchInstructorInformation(java.lang.String input) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.searchInstructorInformation(input);
   }
   
   public java.lang.String deleteStudentInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException{
@@ -62,10 +110,28 @@ public class UniversityServerServiceProxy implements edu.cmpe273.univserver.serv
     return universityServerService.deleteStudentInformation(person);
   }
   
-  public java.lang.String deleteProfessorInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException{
+  public java.lang.String addCourseToCart(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException{
     if (universityServerService == null)
       _initUniversityServerServiceProxy();
-    return universityServerService.deleteProfessorInformation(person);
+    return universityServerService.addCourseToCart(studentCourse);
+  }
+  
+  public java.lang.String removeCourseFromCart(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.removeCourseFromCart(studentCourse);
+  }
+  
+  public java.lang.String editStudentInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.editStudentInformation(person);
+  }
+  
+  public edu.cmpe273.univserver.beans.InstructorCourse[] viewAssignedCourses(java.lang.String sjsuid) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.viewAssignedCourses(sjsuid);
   }
   
   public java.lang.String editProfessorInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException{
@@ -74,10 +140,10 @@ public class UniversityServerServiceProxy implements edu.cmpe273.univserver.serv
     return universityServerService.editProfessorInformation(person);
   }
   
-  public java.lang.String assignCourseToAProfessor(edu.cmpe273.univserver.beans.InstructorCourse ic) throws java.rmi.RemoteException{
+  public int addCourseInBatch(edu.cmpe273.univserver.beans.Course[] co) throws java.rmi.RemoteException{
     if (universityServerService == null)
       _initUniversityServerServiceProxy();
-    return universityServerService.assignCourseToAProfessor(ic);
+    return universityServerService.addCourseInBatch(co);
   }
   
   public edu.cmpe273.univserver.beans.Person[] listAllProfessors() throws java.rmi.RemoteException{
@@ -86,10 +152,46 @@ public class UniversityServerServiceProxy implements edu.cmpe273.univserver.serv
     return universityServerService.listAllProfessors();
   }
   
-  public edu.cmpe273.univserver.beans.Person[] listAllPersons() throws java.rmi.RemoteException{
+  public java.lang.String assignCourseToAProfessor(edu.cmpe273.univserver.beans.InstructorCourse ic) throws java.rmi.RemoteException{
     if (universityServerService == null)
       _initUniversityServerServiceProxy();
-    return universityServerService.listAllPersons();
+    return universityServerService.assignCourseToAProfessor(ic);
+  }
+  
+  public edu.cmpe273.univserver.beans.Person searchStudentInformation(java.lang.String input) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.searchStudentInformation(input);
+  }
+  
+  public edu.cmpe273.univserver.beans.Course[] searchAllCourses(java.lang.String category, java.lang.String input) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.searchAllCourses(category, input);
+  }
+  
+  public java.lang.String adminDeleteCourse(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.adminDeleteCourse(course);
+  }
+  
+  public java.lang.String deleteProfessorInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.deleteProfessorInformation(person);
+  }
+  
+  public edu.cmpe273.univserver.beans.StudentCourse[] getCourseInvoice(java.lang.String sjsuid) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.getCourseInvoice(sjsuid);
+  }
+  
+  public java.lang.String adminAddCourse(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException{
+    if (universityServerService == null)
+      _initUniversityServerServiceProxy();
+    return universityServerService.adminAddCourse(course);
   }
   
   public edu.cmpe273.univserver.beans.Person[] listAllStudents() throws java.rmi.RemoteException{
@@ -104,64 +206,10 @@ public class UniversityServerServiceProxy implements edu.cmpe273.univserver.serv
     return universityServerService.adminEditCourse(course);
   }
   
-  public java.lang.String adminDeleteCourse(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException{
+  public edu.cmpe273.univserver.beans.Person[] listAllPersons() throws java.rmi.RemoteException{
     if (universityServerService == null)
       _initUniversityServerServiceProxy();
-    return universityServerService.adminDeleteCourse(course);
-  }
-  
-  public java.lang.String adminAddCourse(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.adminAddCourse(course);
-  }
-  
-  public java.lang.String removeCourseFromCart(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.removeCourseFromCart(studentCourse);
-  }
-  
-  public java.lang.String addCourseToCart(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.addCourseToCart(studentCourse);
-  }
-  
-  public edu.cmpe273.univserver.beans.StudentCourse[] viewRegisteredCourse(java.lang.String sjsuid) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.viewRegisteredCourse(sjsuid);
-  }
-  
-  public edu.cmpe273.univserver.beans.Course[] searchAllCourses(java.lang.String category, java.lang.String input) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.searchAllCourses(category, input);
-  }
-  
-  public edu.cmpe273.univserver.beans.Person searchStudentInformation(java.lang.String input) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.searchStudentInformation(input);
-  }
-  
-  public edu.cmpe273.univserver.beans.Person searchInstructorInformation(java.lang.String input) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.searchInstructorInformation(input);
-  }
-  
-  public edu.cmpe273.univserver.beans.InstructorCourse[] viewAssignedCourses(java.lang.String sjsuid) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.viewAssignedCourses(sjsuid);
-  }
-  
-  public edu.cmpe273.univserver.beans.StudentCourse[] getCourseInvoice(java.lang.String sjsuid) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.getCourseInvoice(sjsuid);
+    return universityServerService.listAllPersons();
   }
   
   public edu.cmpe273.univserver.beans.Course getCourseDetails(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException{
@@ -170,52 +218,10 @@ public class UniversityServerServiceProxy implements edu.cmpe273.univserver.serv
     return universityServerService.getCourseDetails(course);
   }
   
-  public int addCourseInBatch(edu.cmpe273.univserver.beans.Course[] co) throws java.rmi.RemoteException{
+  public edu.cmpe273.univserver.beans.StudentCourse[] viewRegisteredCourse(java.lang.String sjsuid) throws java.rmi.RemoteException{
     if (universityServerService == null)
       _initUniversityServerServiceProxy();
-    return universityServerService.addCourseInBatch(co);
-  }
-  
-  public edu.cmpe273.univserver.beans.InstructorCourse getAssignedCourse(edu.cmpe273.univserver.beans.InstructorCourse ic) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.getAssignedCourse(ic);
-  }
-  
-  public java.lang.String dropCourse(java.lang.String sjsu_id, java.lang.String name, java.lang.String section) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.dropCourse(sjsu_id, name, section);
-  }
-  
-  public edu.cmpe273.univserver.beans.Person signIn(java.lang.String username, java.lang.String password) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.signIn(username, password);
-  }
-  
-  public java.lang.String addCourse(java.lang.String sjsuid, java.lang.String courseNumber, java.lang.String courseName, java.lang.String section, java.lang.String day, java.lang.String time, java.lang.String location) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.addCourse(sjsuid, courseNumber, courseName, section, day, time, location);
-  }
-  
-  public java.lang.String registerUser(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.registerUser(person);
-  }
-  
-  public boolean adminSignIn(java.lang.String username, java.lang.String password) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.adminSignIn(username, password);
-  }
-  
-  public java.lang.String editCourseAssignedToAProfessor(edu.cmpe273.univserver.beans.InstructorCourse ic) throws java.rmi.RemoteException{
-    if (universityServerService == null)
-      _initUniversityServerServiceProxy();
-    return universityServerService.editCourseAssignedToAProfessor(ic);
+    return universityServerService.viewRegisteredCourse(sjsuid);
   }
   
   public edu.cmpe273.univserver.beans.Person[] getAllStudentsUnderACourse(edu.cmpe273.univserver.beans.Course c) throws java.rmi.RemoteException{

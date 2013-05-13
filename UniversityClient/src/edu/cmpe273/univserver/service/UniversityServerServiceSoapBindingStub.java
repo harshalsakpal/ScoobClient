@@ -16,7 +16,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
     static org.apache.axis.description.OperationDesc [] _operations;
 
     static {
+<<<<<<< HEAD
         _operations = new org.apache.axis.description.OperationDesc[31];
+=======
+        _operations = new org.apache.axis.description.OperationDesc[30];
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         _initOperationDesc1();
         _initOperationDesc2();
         _initOperationDesc3();
@@ -378,6 +382,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
         _operations[29] = oper;
 
+<<<<<<< HEAD
     }
 
     private static void _initOperationDesc4(){
@@ -394,6 +399,8 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
         _operations[30] = oper;
 
+=======
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
     }
 
     public UniversityServerServiceSoapBindingStub() throws org.apache.axis.AxisFault {
@@ -690,6 +697,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
     }
 
     public boolean adminSignIn(java.lang.String username, java.lang.String password) throws java.rmi.RemoteException {
+<<<<<<< HEAD
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -758,6 +766,8 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
     }
 
     public edu.cmpe273.univserver.beans.InstructorCourse getAssignedCourse(edu.cmpe273.univserver.beans.InstructorCourse ic) throws java.rmi.RemoteException {
+=======
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -769,11 +779,15 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "getAssignedCourse"));
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "adminSignIn"));
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {ic});
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {username, password});
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -781,9 +795,15 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         else {
             extractAttachments(_call);
             try {
+<<<<<<< HEAD
                 return (edu.cmpe273.univserver.beans.InstructorCourse) _resp;
             } catch (java.lang.Exception _exception) {
                 return (edu.cmpe273.univserver.beans.InstructorCourse) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.InstructorCourse.class);
+=======
+                return ((java.lang.Boolean) _resp).booleanValue();
+            } catch (java.lang.Exception _exception) {
+                return ((java.lang.Boolean) org.apache.axis.utils.JavaUtils.convert(_resp, boolean.class)).booleanValue();
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -791,7 +811,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public edu.cmpe273.univserver.beans.Course[] getAllCourses() throws java.rmi.RemoteException {
+=======
+    public edu.cmpe273.univserver.beans.Person signIn(java.lang.String username, java.lang.String password) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -803,11 +827,15 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "getAllCourses"));
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "signIn"));
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {username, password});
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -815,9 +843,15 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         else {
             extractAttachments(_call);
             try {
+<<<<<<< HEAD
                 return (edu.cmpe273.univserver.beans.Course[]) _resp;
             } catch (java.lang.Exception _exception) {
                 return (edu.cmpe273.univserver.beans.Course[]) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Course[].class);
+=======
+                return (edu.cmpe273.univserver.beans.Person) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (edu.cmpe273.univserver.beans.Person) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Person.class);
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -825,7 +859,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public edu.cmpe273.univserver.beans.Person searchInstructorInformation(java.lang.String input) throws java.rmi.RemoteException {
+=======
+    public edu.cmpe273.univserver.beans.InstructorCourse getAssignedCourse(edu.cmpe273.univserver.beans.InstructorCourse ic) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -837,11 +875,119 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "searchInstructorInformation"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
  try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {input});
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "getAssignedCourse"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {ic});
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+<<<<<<< HEAD
+                return (edu.cmpe273.univserver.beans.Person) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (edu.cmpe273.univserver.beans.Person) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Person.class);
+=======
+                return (edu.cmpe273.univserver.beans.InstructorCourse) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (edu.cmpe273.univserver.beans.InstructorCourse) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.InstructorCourse.class);
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+<<<<<<< HEAD
+    public java.lang.String deleteStudentInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException {
+=======
+    public edu.cmpe273.univserver.beans.Course[] getAllCourses() throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[10]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "deleteStudentInformation"));
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "getAllCourses"));
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {person});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+<<<<<<< HEAD
+                return (java.lang.String) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (java.lang.String) org.apache.axis.utils.JavaUtils.convert(_resp, java.lang.String.class);
+=======
+                return (edu.cmpe273.univserver.beans.Course[]) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (edu.cmpe273.univserver.beans.Course[]) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Course[].class);
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+<<<<<<< HEAD
+    public java.lang.String addCourseToCart(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException {
+=======
+    public edu.cmpe273.univserver.beans.Person searchInstructorInformation(java.lang.String input) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[11]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "addCourseToCart"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {studentCourse});
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "searchInstructorInformation"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {input});
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -859,75 +1005,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
-    public java.lang.String deleteStudentInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[10]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "deleteStudentInformation"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {person});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (java.lang.String) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (java.lang.String) org.apache.axis.utils.JavaUtils.convert(_resp, java.lang.String.class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
-    public java.lang.String addCourseToCart(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[11]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "addCourseToCart"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {studentCourse});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (java.lang.String) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (java.lang.String) org.apache.axis.utils.JavaUtils.convert(_resp, java.lang.String.class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
+<<<<<<< HEAD
     public java.lang.String removeCourseFromCart(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException {
+=======
+    public java.lang.String deleteStudentInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -939,11 +1021,19 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "removeCourseFromCart"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
  try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {studentCourse});
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "deleteStudentInformation"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {person});
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -961,7 +1051,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public java.lang.String editStudentInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException {
+=======
+    public java.lang.String addCourseToCart(edu.cmpe273.univserver.beans.StudentCourse[] studentCourse) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -973,11 +1067,19 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "editStudentInformation"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
  try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {person});
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "addCourseToCart"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {studentCourse});
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -1029,7 +1131,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public java.lang.String editProfessorInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException {
+=======
+    public java.lang.String editStudentInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1041,7 +1147,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "editProfessorInformation"));
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "editStudentInformation"));
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -1063,7 +1173,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public int addCourseInBatch(edu.cmpe273.univserver.beans.Course[] co) throws java.rmi.RemoteException {
+=======
+    public edu.cmpe273.univserver.beans.InstructorCourse[] viewAssignedCourses(java.lang.String sjsuid) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1075,7 +1189,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "addCourseInBatch"));
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "viewAssignedCourses"));
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -1087,9 +1205,15 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         else {
             extractAttachments(_call);
             try {
+<<<<<<< HEAD
                 return ((java.lang.Integer) _resp).intValue();
             } catch (java.lang.Exception _exception) {
                 return ((java.lang.Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+=======
+                return (edu.cmpe273.univserver.beans.InstructorCourse[]) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (edu.cmpe273.univserver.beans.InstructorCourse[]) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.InstructorCourse[].class);
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -1097,7 +1221,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public edu.cmpe273.univserver.beans.Person[] listAllProfessors() throws java.rmi.RemoteException {
+=======
+    public java.lang.String editProfessorInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1109,11 +1237,19 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "listAllProfessors"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
  try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "editProfessorInformation"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {person});
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -1121,9 +1257,15 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         else {
             extractAttachments(_call);
             try {
+<<<<<<< HEAD
                 return (edu.cmpe273.univserver.beans.Person[]) _resp;
             } catch (java.lang.Exception _exception) {
                 return (edu.cmpe273.univserver.beans.Person[]) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Person[].class);
+=======
+                return (java.lang.String) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (java.lang.String) org.apache.axis.utils.JavaUtils.convert(_resp, java.lang.String.class);
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -1131,7 +1273,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public java.lang.String assignCourseToAProfessor(edu.cmpe273.univserver.beans.InstructorCourse ic) throws java.rmi.RemoteException {
+=======
+    public int addCourseInBatch(edu.cmpe273.univserver.beans.Course[] co) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1143,11 +1289,19 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "assignCourseToAProfessor"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
  try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {ic});
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "addCourseInBatch"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {co});
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -1155,9 +1309,15 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         else {
             extractAttachments(_call);
             try {
+<<<<<<< HEAD
                 return (java.lang.String) _resp;
             } catch (java.lang.Exception _exception) {
                 return (java.lang.String) org.apache.axis.utils.JavaUtils.convert(_resp, java.lang.String.class);
+=======
+                return ((java.lang.Integer) _resp).intValue();
+            } catch (java.lang.Exception _exception) {
+                return ((java.lang.Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -1165,7 +1325,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public edu.cmpe273.univserver.beans.Person searchStudentInformation(java.lang.String input) throws java.rmi.RemoteException {
+=======
+    public edu.cmpe273.univserver.beans.Person[] listAllProfessors() throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1177,11 +1341,15 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "searchStudentInformation"));
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "listAllProfessors"));
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {input});
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -1189,9 +1357,9 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         else {
             extractAttachments(_call);
             try {
-                return (edu.cmpe273.univserver.beans.Person) _resp;
+                return (edu.cmpe273.univserver.beans.Person[]) _resp;
             } catch (java.lang.Exception _exception) {
-                return (edu.cmpe273.univserver.beans.Person) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Person.class);
+                return (edu.cmpe273.univserver.beans.Person[]) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Person[].class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -1199,7 +1367,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public edu.cmpe273.univserver.beans.Course[] searchAllCourses(java.lang.String category, java.lang.String input) throws java.rmi.RemoteException {
+=======
+    public java.lang.String assignCourseToAProfessor(edu.cmpe273.univserver.beans.InstructorCourse ic) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1211,11 +1383,19 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "searchAllCourses"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
  try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {category, input});
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "assignCourseToAProfessor"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {ic});
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -1223,9 +1403,15 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         else {
             extractAttachments(_call);
             try {
+<<<<<<< HEAD
                 return (edu.cmpe273.univserver.beans.Course[]) _resp;
             } catch (java.lang.Exception _exception) {
                 return (edu.cmpe273.univserver.beans.Course[]) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Course[].class);
+=======
+                return (java.lang.String) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (java.lang.String) org.apache.axis.utils.JavaUtils.convert(_resp, java.lang.String.class);
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -1233,7 +1419,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public java.lang.String adminDeleteCourse(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException {
+=======
+    public edu.cmpe273.univserver.beans.Person searchStudentInformation(java.lang.String input) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1245,11 +1435,19 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "adminDeleteCourse"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
  try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {course});
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "searchStudentInformation"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {input});
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -1257,9 +1455,15 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         else {
             extractAttachments(_call);
             try {
+<<<<<<< HEAD
                 return (java.lang.String) _resp;
             } catch (java.lang.Exception _exception) {
                 return (java.lang.String) org.apache.axis.utils.JavaUtils.convert(_resp, java.lang.String.class);
+=======
+                return (edu.cmpe273.univserver.beans.Person) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (edu.cmpe273.univserver.beans.Person) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Person.class);
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -1267,7 +1471,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public java.lang.String deleteProfessorInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException {
+=======
+    public edu.cmpe273.univserver.beans.Course[] searchAllCourses(java.lang.String category, java.lang.String input) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1279,11 +1487,19 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "deleteProfessorInformation"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
  try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {person});
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "searchAllCourses"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {category, input});
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -1291,9 +1507,15 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         else {
             extractAttachments(_call);
             try {
+<<<<<<< HEAD
                 return (java.lang.String) _resp;
             } catch (java.lang.Exception _exception) {
                 return (java.lang.String) org.apache.axis.utils.JavaUtils.convert(_resp, java.lang.String.class);
+=======
+                return (edu.cmpe273.univserver.beans.Course[]) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (edu.cmpe273.univserver.beans.Course[]) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Course[].class);
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -1301,7 +1523,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public edu.cmpe273.univserver.beans.StudentCourse[] getCourseInvoice(java.lang.String sjsuid) throws java.rmi.RemoteException {
+=======
+    public java.lang.String adminDeleteCourse(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1313,11 +1539,19 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "getCourseInvoice"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
  try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {sjsuid});
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "adminDeleteCourse"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {course});
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -1325,9 +1559,15 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         else {
             extractAttachments(_call);
             try {
+<<<<<<< HEAD
                 return (edu.cmpe273.univserver.beans.StudentCourse[]) _resp;
             } catch (java.lang.Exception _exception) {
                 return (edu.cmpe273.univserver.beans.StudentCourse[]) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.StudentCourse[].class);
+=======
+                return (java.lang.String) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (java.lang.String) org.apache.axis.utils.JavaUtils.convert(_resp, java.lang.String.class);
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -1335,7 +1575,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public java.lang.String adminAddCourse(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException {
+=======
+    public java.lang.String deleteProfessorInformation(edu.cmpe273.univserver.beans.Person person) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1347,11 +1591,19 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "adminAddCourse"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
  try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {course});
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "deleteProfessorInformation"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {person});
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -1369,7 +1621,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public edu.cmpe273.univserver.beans.Person[] listAllStudents() throws java.rmi.RemoteException {
+=======
+    public edu.cmpe273.univserver.beans.StudentCourse[] getCourseInvoice(java.lang.String sjsuid) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1381,11 +1637,19 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "listAllStudents"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
  try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "getCourseInvoice"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {sjsuid});
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -1393,9 +1657,15 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         else {
             extractAttachments(_call);
             try {
+<<<<<<< HEAD
                 return (edu.cmpe273.univserver.beans.Person[]) _resp;
             } catch (java.lang.Exception _exception) {
                 return (edu.cmpe273.univserver.beans.Person[]) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Person[].class);
+=======
+                return (edu.cmpe273.univserver.beans.StudentCourse[]) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (edu.cmpe273.univserver.beans.StudentCourse[]) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.StudentCourse[].class);
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -1403,7 +1673,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public java.lang.String adminEditCourse(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException {
+=======
+    public java.lang.String adminAddCourse(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1415,7 +1689,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "adminEditCourse"));
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "adminAddCourse"));
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -1437,7 +1715,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public edu.cmpe273.univserver.beans.Person[] listAllPersons() throws java.rmi.RemoteException {
+=======
+    public edu.cmpe273.univserver.beans.Person[] listAllStudents() throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1449,7 +1731,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "listAllPersons"));
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "listAllStudents"));
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -1471,7 +1757,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
 }
     }
 
+<<<<<<< HEAD
     public edu.cmpe273.univserver.beans.Course getCourseDetails(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException {
+=======
+    public java.lang.String adminEditCourse(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -1483,7 +1773,11 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
         _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "getCourseDetails"));
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "adminEditCourse"));
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -1495,6 +1789,109 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
         else {
             extractAttachments(_call);
             try {
+                return (edu.cmpe273.univserver.beans.Course) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (edu.cmpe273.univserver.beans.Course) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Course.class);
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+<<<<<<< HEAD
+    public edu.cmpe273.univserver.beans.StudentCourse[] viewRegisteredCourse(java.lang.String sjsuid) throws java.rmi.RemoteException {
+=======
+    public edu.cmpe273.univserver.beans.Person[] listAllPersons() throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[29]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "viewRegisteredCourse"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {sjsuid});
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "listAllPersons"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+<<<<<<< HEAD
+                return (edu.cmpe273.univserver.beans.StudentCourse[]) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (edu.cmpe273.univserver.beans.StudentCourse[]) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.StudentCourse[].class);
+=======
+                return (edu.cmpe273.univserver.beans.Person[]) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (edu.cmpe273.univserver.beans.Person[]) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Person[].class);
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+<<<<<<< HEAD
+    public edu.cmpe273.univserver.beans.Person[] getAllStudentsUnderACourse(edu.cmpe273.univserver.beans.Course c) throws java.rmi.RemoteException {
+=======
+    public edu.cmpe273.univserver.beans.Course getCourseDetails(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException {
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[30]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+<<<<<<< HEAD
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "getAllStudentsUnderACourse"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {c});
+=======
+        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "getCourseDetails"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {course});
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+<<<<<<< HEAD
+                return (edu.cmpe273.univserver.beans.Person[]) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (edu.cmpe273.univserver.beans.Person[]) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Person[].class);
+=======
                 return (edu.cmpe273.univserver.beans.Course) _resp;
             } catch (java.lang.Exception _exception) {
                 return (edu.cmpe273.univserver.beans.Course) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Course.class);
@@ -1532,40 +1929,7 @@ public class UniversityServerServiceSoapBindingStub extends org.apache.axis.clie
                 return (edu.cmpe273.univserver.beans.StudentCourse[]) _resp;
             } catch (java.lang.Exception _exception) {
                 return (edu.cmpe273.univserver.beans.StudentCourse[]) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.StudentCourse[].class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
-    public edu.cmpe273.univserver.beans.Person[] getAllStudentsUnderACourse(edu.cmpe273.univserver.beans.Course c) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[30]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://service.univserver.cmpe273.edu", "getAllStudentsUnderACourse"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {c});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (edu.cmpe273.univserver.beans.Person[]) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (edu.cmpe273.univserver.beans.Person[]) org.apache.axis.utils.JavaUtils.convert(_resp, edu.cmpe273.univserver.beans.Person[].class);
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {

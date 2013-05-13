@@ -1,0 +1,68 @@
+<%@page import="edu.cmpe273.univserver.beans.Course"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>List of All Students</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%
+	String context = request.getContextPath();
+	Course[] course = (Course[])session.getAttribute("listOfAllCourses");
+%>
+<!-- Bootstrap -->
+<link href="<%=context%>/css/bootstrap.min.css" rel="stylesheet"
+	media="screen">
+<%@ include file="AdminHome.jsp"%>
+<%@ include file="Proxy.jsp"%>
+</head>
+<body>
+	<div class="container control-group">
+		<header class="row">
+			<div class="span12">
+				<div class="well">
+					<form method="post" name="ListAllCourses">
+						<div class="controls controls-row info">
+							<input type="button" class="input-medium required span3"
+								name="GetAllCourses" value="Get All Courses"
+								onclick="return getAllCourses()">
+						</div>
+
+				<%if(course!=null){%> 
+				
+					<table border="1" align="left">
+				<tr>
+					<td>Sr. No.</td><td>Course No</td><td>Section No</td><td>Course Name</td><td>Course Description</td><td>Department</td>
+				</tr>	
+				
+				<%	for(int iCount=0;iCount<course.length;iCount++){
+					%>
+				
+				<tr>
+					<td><%=(iCount)+1 %></td>
+					<td><%=course[iCount].getCourseNumber() %></td>
+					<td><%=course[iCount].getSection()%></td>
+					<td><%=course[iCount].getCourseName()%></td>
+					<td><%=course[iCount].getCourseDesc()%></td>
+					<td><%=course[iCount].getDepartment()%></td>
+				</tr>
+				
+				<%}%>
+				</table>
+				<% }%>
+
+					</form>
+				</div>
+			</div>
+		</header>
+	</div>
+
+	<script type="text/javascript">
+		function getAllCourses() {
+			document.forms[0].action = "../GetAllCourses";
+			document.forms[0].submit();
+		}
+	</script>
+
+</body>
+</html>

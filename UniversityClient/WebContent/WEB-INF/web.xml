@@ -234,14 +234,26 @@
     <servlet-name>GetAllPersons</servlet-name>
     <url-pattern>/GetAllPersons</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>ListStudentsUnderACourse</display-name>
     <servlet-name>ListStudentsUnderACourse</servlet-name>
     <servlet-class>edu.cmpe273.univclient.servlet.ListStudentsUnderACourse</servlet-class>
   </servlet>
+  
   <servlet-mapping>
     <servlet-name>ListStudentsUnderACourse</servlet-name>
     <url-pattern>/ListStudentsUnderACourse</url-pattern>
+   </servlet-mapping>
+  
+  <servlet> 
+    <display-name>GetAllCourses</display-name>
+    <servlet-name>GetAllCourses</servlet-name>
+    <servlet-class>edu.cmpe273.univclient.servlet.GetAllCourses</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetAllCourses</servlet-name>
+    <url-pattern>/GetAllCourses</url-pattern>
   </servlet-mapping>
 </web-app>

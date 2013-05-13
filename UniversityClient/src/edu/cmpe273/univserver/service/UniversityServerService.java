@@ -38,5 +38,8 @@ public interface UniversityServerService extends java.rmi.Remote {
     public edu.cmpe273.univserver.beans.Person[] listAllPersons() throws java.rmi.RemoteException;
     public edu.cmpe273.univserver.beans.Course getCourseDetails(edu.cmpe273.univserver.beans.Course course) throws java.rmi.RemoteException;
     public edu.cmpe273.univserver.beans.StudentCourse[] viewRegisteredCourse(java.lang.String sjsuid) throws java.rmi.RemoteException;
+<<<<<<< HEAD
     public edu.cmpe273.univserver.beans.Person[] getAllStudentsUnderACourse(edu.cmpe273.univserver.beans.Course c) throws java.rmi.RemoteException;
+=======
+>>>>>>> 268ee29531547227e166b494bd4cf75488e52125
 }
